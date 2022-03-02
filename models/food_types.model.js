@@ -1,3 +1,4 @@
+
 const mongoose, { Schema } = require("mongoose");
 
 const FoodTypeSchema = new Schema({
