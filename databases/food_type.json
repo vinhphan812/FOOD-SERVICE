@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm",
+  "code": "RICE",
+  "is_delete": false,
+  "description": ""
+},{
+  "_id": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì",
+  "code": "NOODLE",
+  "is_delete": false,
+  "description": ""
+},{
+  "_id": {
+    "$oid": "6220ef9fe746d247310976de"
+  },
+  "name": "Đồ ăn nhẹ",
+  "code": "SNACKS",
+  "is_delete": false,
+  "description": ""
+},{
+  "_id": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Đồ ăn chay",
+  "code": "VEGETARIAN_FOOD",
+  "is_delete": false,
+  "description": ""
+},{
+  "_id": {
+    "$oid": "6220f000e746d247310976e0"
+  },
+  "name": "Đồ ăn nhanh",
+  "code": "FAST_FOOD",
+  "is_delete": false,
+  "description": ""
+},{
+  "_id": {
+    "$oid": "6220f01be746d247310976e1"
+  },
+  "name": "Đồ uống",
+  "code": "DRINK",
+  "is_delete": false,
+  "description": ""
+}]
