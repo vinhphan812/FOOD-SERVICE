@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -12,7 +14,7 @@ const orderSchema = new Schema(
 		delivery: String,
 		status: Number,
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const Order = mongoose.model("ORDER", orderSchema, "ORDER");

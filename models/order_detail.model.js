@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -6,7 +8,7 @@ const orderDetailSchema = new Schema(
 		food_id: { type: Schema.Types.ObjectId, ref: "FOOD" },
 		quantity: Number,
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const OrderDetail = mongoose.model(

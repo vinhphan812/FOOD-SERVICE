@@ -1,13 +1,13 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const sessionStoreSchema = new Schema(
 	{
 		data: [{ type: Schema.Types.ObjectId, ref: "FOODS" }],
-		// data: [String],
-		date: { type: Date, default: new Date() },
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const SessionStore = mongoose.model("SESSION", sessionStoreSchema, "SESSION");

@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -21,11 +23,10 @@ const VoucherSchema = new Schema(
 		reference_id: { type: Schema.Types.ObjectId, ref: [] }, // reference id user or
 		is_delete: Boolean,
 		create_by: { type: Schema.Types.ObjectId, ref: [] },
-		create_date: { type: Date, default: new Date() },
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
-const Voucher = mongoose.model("VOUCHERS", VoucherSchema, "VOUCHERS");
+const Voucher = mongoose.model("VOUCHER", VoucherSchema, "VOUCHER");
 
 module.exports = Voucher;

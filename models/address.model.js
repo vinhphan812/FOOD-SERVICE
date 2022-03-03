@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -7,7 +9,7 @@ const addressSchema = new Schema(
 		location: String,
 		address: String,
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const Address = mongoose.model("ADDRESS", addressSchema, "ADDRESS");

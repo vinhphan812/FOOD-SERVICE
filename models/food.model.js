@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -11,9 +13,9 @@ const FoodSchema = new Schema(
 		is_delete: Boolean,
 		code: String,
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
-const Food = mongoose.model("FOODS", FoodSchema, "FOODS");
+const Food = mongoose.model("FOOD", FoodSchema, "FOOD");
 
 module.exports = Food;

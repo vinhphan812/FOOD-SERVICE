@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -13,7 +15,7 @@ const RankingSchema = new Schema(
 			enum: ["NORMAL", "SILVER", "GOLD", "PLATINUM", "DIAMOND"],
 		},
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const Ranking = mongoose.model("RANKING", RankingSchema, "RANKING");

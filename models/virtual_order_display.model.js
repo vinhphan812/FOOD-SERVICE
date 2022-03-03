@@ -1,3 +1,5 @@
+const { SCHEMA_OPTION } = require("../utils/constant");
+
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -6,7 +8,7 @@ const virtualOrderDisplaySchema = new Schema(
 		order_id: { type: Schema.Types.ObjectId, ref: "ORDER" },
 		account_id: { type: Schema.Types.ObjectId, ref: "ACCOUNT" },
 	},
-	{ versionKey: false }
+	SCHEMA_OPTION
 );
 
 const VirtualOrderDisplay = mongoose.model(
