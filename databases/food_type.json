@@ -1,49 +1,83 @@
-[{
-  "_id": {
-    "$oid": "6220ef39e746d247310976dc"
-  },
-  "name": "Cơm",
-  "code": "RICE",
-  "is_delete": false,
-  "description": ""
-},{
-  "_id": {
-    "$oid": "6220ef8de746d247310976dd"
-  },
-  "name": "Mì",
-  "code": "NOODLE",
-  "is_delete": false,
-  "description": ""
-},{
-  "_id": {
-    "$oid": "6220ef9fe746d247310976de"
-  },
-  "name": "Đồ ăn nhẹ",
-  "code": "SNACKS",
-  "is_delete": false,
-  "description": ""
-},{
-  "_id": {
-    "$oid": "6220efe0e746d247310976df"
-  },
-  "name": "Đồ ăn chay",
-  "code": "VEGETARIAN_FOOD",
-  "is_delete": false,
-  "description": ""
-},{
-  "_id": {
-    "$oid": "6220f000e746d247310976e0"
-  },
-  "name": "Đồ ăn nhanh",
-  "code": "FAST_FOOD",
-  "is_delete": false,
-  "description": ""
-},{
-  "_id": {
-    "$oid": "6220f01be746d247310976e1"
-  },
-  "name": "Đồ uống",
-  "code": "DRINK",
-  "is_delete": false,
-  "description": ""
-}]
+[
+	{
+		"_id": {
+			"$oid": "6220ef39e746d247310976dc"
+		},
+		"name": "Cơm",
+		"code": "RICE",
+		"is_delete": false,
+		"description": "Cơm là một loại thức ăn được làm ra từ gạo bằng cách đem nấu với một lượng vừa đủ nước để nấu chín."
+	},
+	{
+		"_id": {
+			"$oid": "6220ef8de746d247310976dd"
+		},
+		"name": "Mì",
+		"code": "NOODLE",
+		"is_delete": false,
+		"description": "Mì sợi là một thực phẩm thường dùng trong nhiều nền văn hóa làm từ bột không men"
+	},
+	{
+		"_id": {
+			"$oid": "6220ef9fe746d247310976de"
+		},
+		"name": "Đồ ăn nhẹ",
+		"code": "SNACKS",
+		"is_delete": false,
+		"description": ""
+	},
+	{
+		"_id": {
+			"$oid": "6220efe0e746d247310976df"
+		},
+		"name": "Đồ ăn chay",
+		"code": "VEGETARIAN_FOOD",
+		"is_delete": false,
+		"description": "Ăn chay là việc thực hành kiêng ăn thịt (thịt đỏ, thịt gia cầm, hải sản và thịt của bất kỳ động vật nào khác), và cũng có thể bao gồm kiêng các sản phẩm phụ của quá trình giết mổ động vật"
+	},
+	{
+		"_id": {
+			"$oid": "6220f000e746d247310976e0"
+		},
+		"name": "Đồ ăn nhanh",
+		"code": "FAST_FOOD",
+		"is_delete": false,
+		"description": ""
+	},
+	{
+		"_id": {
+			"$oid": "6220f01be746d247310976e1"
+		},
+		"name": "Đồ uống",
+		"code": "DRINK",
+		"is_delete": false,
+		"description": ""
+	},
+	{
+		"_id": {
+			"$oid": "6221b3b6e746d247310976f4"
+		},
+		"name": "Phở",
+		"description": "Phở là một món ăn truyền thống của Việt Nam, phở có nguồn gốc từ Hà Nội và Nam Định, và được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.",
+		"code": "PHO",
+		"is_delete": false
+	},
+	{
+		"_id": {
+			"$oid": "6221b3d8e746d247310976f5"
+		},
+		"name": "Món gà",
+		"description": "",
+		"code": "CHICKEN",
+		"is_delete": false
+	},
+	{
+		"_id": {
+			"$oid": "6221b408e746d247310976f6"
+		},
+		"name": "Pizza",
+		"description": "Pizza là loại bánh dẹt,tròn được chế biến từ bột mì,nấm men... sau khi đã được ủ bột để nghỉ ít nhất 24 tiếng đồng hồ và nhào nặn thành loại bánh có hình dạng tròn và dẹt,và được cho vào lò nướng chín trước khi ăn.",
+		"code": 15,
+		"is_delete": false
+	}
+]
