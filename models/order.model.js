@@ -12,7 +12,10 @@ const orderSchema = new Schema(
 		is_delete: Boolean,
 		pick_up: String,
 		delivery: String,
+		user_id: { type: Schema.Types.ObjectId, ref: "USER" },
+		sold_by: { type: Schema.Types.ObjectId, ref: "RESTAURANT" },
 		status: Number,
+		note: String,
 	},
 	SCHEMA_OPTION
 );
