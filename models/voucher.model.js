@@ -11,9 +11,9 @@ const VoucherSchema = new Schema(
 		description: String,
 		voucher_type: {
 			type: String,
-			enum: ["seller", "shipper", "app", "food"],
+			enum: ["SELLER", "SHIPPER", "APP", "FOOD"],
 		},
-		discount_type: { type: String, enum: ["money", "percent"] },
+		discount_type: { type: String, enum: ["MONEY", "PERCENT"] },
 		discount: Number,
 		max_used: Number,
 		used: Number,

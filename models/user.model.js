@@ -12,7 +12,7 @@ const userScheme = new Schema(
 		type: [
 			{
 				type: String,
-				enum: ["admin", "manager", "customer", "shipper", "seller"],
+				enum: ["ADMIN", "MANAGER", "CUSTOMER", "SHIPPER", "SELLER"],
 			},
 		],
 		first_name: String,
