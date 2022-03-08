@@ -1,47 +1,41 @@
-[
-	{
-		"_id": {
-			"$oid": "6220f056e746d247310976e4"
-		},
-		"code": "NORMAL",
-		"name": "Thành Viên",
-		"min_exp": 0,
-		"icon": ""
-	},
-	{
-		"_id": {
-			"$oid": "6220f0a0e746d247310976e5"
-		},
-		"code": "SILVER",
-		"name": "Bạc",
-		"min_exp": 1800,
-		"icon": ""
-	},
-	{
-		"_id": {
-			"$oid": "6220f0c2e746d247310976e6"
-		},
-		"code": "GOLD",
-		"name": "Vàng",
-		"min_exp": 7800,
-		"icon": ""
-	},
-	{
-		"_id": {
-			"$oid": "6220f115e746d247310976e7"
-		},
-		"code": "PLATINUM",
-		"name": "Bạch Kim",
-		"min_exp": 18000,
-		"icon": ""
-	},
-	{
-		"_id": {
-			"$oid": "6220f151e746d247310976e8"
-		},
-		"code": "DIAMOND",
-		"name": "Kim Cương",
-		"min_exp": 38000,
-		"icon": ""
-	}
-]
+[{
+  "_id": {
+    "$oid": "6220f056e746d247310976e4"
+  },
+  "code": "NORMAL",
+  "name": "Thành Viên",
+  "min_exp": 0,
+  "icon": ""
+},{
+  "_id": {
+    "$oid": "6220f0a0e746d247310976e5"
+  },
+  "code": "SILVER",
+  "name": "Bạc",
+  "min_exp": 1800,
+  "icon": ""
+},{
+  "_id": {
+    "$oid": "6220f0c2e746d247310976e6"
+  },
+  "code": "GOLD",
+  "name": "Vàng",
+  "min_exp": 7800,
+  "icon": ""
+},{
+  "_id": {
+    "$oid": "6220f115e746d247310976e7"
+  },
+  "code": "PLATINUM",
+  "name": "Bạch Kim",
+  "min_exp": 18000,
+  "icon": ""
+},{
+  "_id": {
+    "$oid": "6220f151e746d247310976e8"
+  },
+  "code": "DIAMOND",
+  "name": "Kim Cương",
+  "min_exp": 38000,
+  "icon": ""
+}]

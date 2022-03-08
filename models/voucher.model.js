@@ -22,7 +22,7 @@ const VoucherSchema = new Schema(
 		max_price: Number,
 		reference_id: { type: Schema.Types.ObjectId, ref: [] }, // reference id user or
 		is_delete: Boolean,
-		create_by: { type: Schema.Types.ObjectId, ref: [] },
+		created_by: { type: Schema.Types.ObjectId, ref: [] },
 	},
 	SCHEMA_OPTION
 );

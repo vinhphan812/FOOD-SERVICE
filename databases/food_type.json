@@ -77,7 +77,7 @@
 		},
 		"name": "Pizza",
 		"description": "Pizza là loại bánh dẹt,tròn được chế biến từ bột mì,nấm men... sau khi đã được ủ bột để nghỉ ít nhất 24 tiếng đồng hồ và nhào nặn thành loại bánh có hình dạng tròn và dẹt,và được cho vào lò nướng chín trước khi ăn.",
-		"code": 15,
+		"code": "PIZZA",
 		"is_delete": false
 	}
 ]
