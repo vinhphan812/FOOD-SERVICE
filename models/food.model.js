@@ -9,10 +9,12 @@ const FoodSchema = new Schema(
 		description: String,
 		thumbnail: String,
 		price: Number,
-		food_type_id: { type: Schema.Types.ObjectId, ref: "FOOD_TYPES" },
+		type: [{ type: Schema.Types.ObjectId, ref: "FOOD_TYPE" }],
 		is_delete: Boolean,
 		code: String,
 		is_stock: Boolean,
+		average_rating: { type: Number, min: 0, max: 5 },
+		rating_count: Number,
 		restaurant: { type: Schema.Types.ObjectId, ref: "RESTAURANT" },
 	},
 	SCHEMA_OPTION
