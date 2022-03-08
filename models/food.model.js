@@ -13,6 +13,7 @@ const FoodSchema = new Schema(
 		is_delete: Boolean,
 		code: String,
 		is_stock: Boolean,
+		restaurant: { type: Schema.Types.ObjectId, ref: "RESTAURANT" },
 	},
 	SCHEMA_OPTION
 );
