@@ -1,43 +1,42 @@
-[{
-  "_id": {
-    "$oid": "6225d4f9932f5e01a8f4db3a"
-  },
-  "first_name": "SYSTEM",
-  "last_name": "ADMIN",
-  "avatar": "",
-  "current_rank": {
-    "$oid": "6220f151e746d247310976e8"
-  },
-  "score": 99999999,
-  "isVerifyEmail": true,
-  "shipper_id": "",
-  "restaurant": "",
-  "user_name": "system_admin",
-  "password": "202cb962ac59075b964b07152d234b70",
-  "email": "systemAdmin@foozie.com",
-  "phone": "00000000000",
-  "type": [
-    "ADMIN"
-  ]
-},{
-  "_id": {
-    "$oid": "622709ea932f5e01a8f4db40"
-  },
-  "first_name": "MANAGER",
-  "last_name": "APP",
-  "avatar": "",
-  "current_rank": {
-    "$oid": "6220f151e746d247310976e8"
-  },
-  "score": 99999999,
-  "isVerifyEmail": true,
-  "shipper_id": "",
-  "restaurant": "",
-  "user_name": "manager_app",
-  "password": "202cb962ac59075b964b07152d234b70",
-  "email": "manager@foozie.com",
-  "phone": "00000000000",
-  "type": [
-    "MANAGER"
-  ]
-}]
+[
+	{
+		"_id": {
+			"$oid": "6225d4f9932f5e01a8f4db3a"
+		},
+		"first_name": "SYSTEM",
+		"last_name": "ADMIN",
+		"avatar": "",
+		"current_rank": {
+			"$oid": "6220f151e746d247310976e8"
+		},
+		"score": 99999999,
+		"isVerifyEmail": true,
+		"shipper_id": "",
+		"restaurant": "",
+		"user_name": "system_admin",
+		"password": "202cb962ac59075b964b07152d234b70",
+		"email": "systemAdmin@foozie.com",
+		"phone": "00000000000",
+		"type": ["ADMIN"]
+	},
+	{
+		"_id": {
+			"$oid": "622709ea932f5e01a8f4db40"
+		},
+		"first_name": "MANAGER",
+		"last_name": "APP",
+		"avatar": "",
+		"current_rank": {
+			"$oid": "6220f151e746d247310976e8"
+		},
+		"score": 99999999,
+		"isVerifyEmail": true,
+		"shipper_id": "",
+		"restaurant": "",
+		"user_name": "manager_app",
+		"password": "202cb962ac59075b964b07152d234b70",
+		"email": "manager@foozie.com",
+		"phone": "00000000000",
+		"type": ["MANAGER"]
+	}
+]
