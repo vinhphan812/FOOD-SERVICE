@@ -8,7 +8,8 @@
 		"open": "10:00",
 		"close": "22:00",
 		"rating": 8.9,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -19,7 +20,8 @@
 		"open": "09:00",
 		"close": "22:00",
 		"rating": 7.5,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -30,7 +32,8 @@
 		"open": "09:00",
 		"close": "12:00",
 		"rating": 6.5,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -41,7 +44,8 @@
 		"open": "09:00",
 		"close": "22:00",
 		"rating": 6.8,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -52,7 +56,8 @@
 		"open": "06:00",
 		"close": "23:00",
 		"rating": 6.6,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -63,7 +68,8 @@
 		"open": "09:30",
 		"close": "21:00",
 		"rating": 7.4,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	},
 	{
 		"_id": {
@@ -74,6 +80,7 @@
 		"open": "09:00",
 		"close": "21:00",
 		"rating": 9.2,
-		"wallet": 0
+		"wallet": 0,
+		"is_delete": false
 	}
 ]
