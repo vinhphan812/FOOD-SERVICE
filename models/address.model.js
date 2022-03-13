@@ -5,9 +5,11 @@ const { Schema } = mongoose;
 
 const addressSchema = new Schema(
 	{
-		name: String,
 		location: String,
 		address: String,
+		user_id: { type: Schema.Types.ObjectId, ref: "USER" },
+		is_default: { type: Schema.Types.Boolean, default: false },
+		is_delete: { type: Schema.Types.Boolean, default: false },
 	},
 	SCHEMA_OPTION
 );
