@@ -6,15 +6,17 @@ module.exports = {
 		const { user, pass } = req.body;
 		let success = false;
 
-		const { id, type } = await User.findOne({
+		const userData = await User.findOne({
 			$or: [{ user_name: user }, { email: user }, { phone: user }],
 			password: md5(pass),
 		});
 
-		if (id) {
+		if (!userData) success = false;
+		else {
 			success = true;
-			res.cookie("userId", id, { signed: true });
-			if (type.length) res.cookie("type", type[0], { signed: true });
+			res.cookie("userId", userData.id, { signed: true });
+			if (userData.type.length)
+				res.cookie("type", userData.type[0], { signed: true });
 		}
 
 		res.json({
@@ -32,7 +34,9 @@ module.exports = {
 		res.json({ success: true, message: "SEND_MAIL_SUCCESS" });
 	},
 	signUpHandle: async (req, res, next) => {
-		const { user } = req.locals;
+		const { user } = res.locals;
+		user.type = ["CUSTOMER"];
+		user.password = md5(user.password);
 		await User.create(user);
 
 		//! send mail

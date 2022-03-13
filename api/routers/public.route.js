@@ -1,3 +1,5 @@
+const Mailer = require("../../modules/mailer");
+
 const express = require("express");
 
 const idValidation = require("../validations/id.validate");
@@ -6,6 +8,7 @@ const {
 	getFoodsInRestaurant,
 	getFoodsType,
 } = require("../controllers/public.controller");
+const { verifyMail } = require("../../utils/template.mail");
 
 const router = express.Router();
 
@@ -18,5 +21,15 @@ router.get(
 );
 
 router.get("/food-type", getFoodsType);
+router.get("/mail", async (req, res) => {
+	const mailer = await Mailer.init();
+
+	mailer.sendMail(
+		["vinhphan812@gmail.com"],
+		"Hello",
+		verifyMail("Phan Thanh Vinh", "12414")
+	);
+	res.json({ mailer });
+});
 
 module.exports = router;

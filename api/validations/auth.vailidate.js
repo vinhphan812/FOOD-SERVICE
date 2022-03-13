@@ -2,14 +2,22 @@ const User = require("../../models/user.model");
 
 module.exports = {
 	signUpValidate: async (req, res, next) => {
-		const { user, pass, first_name, last_name, email, phone } = req.body;
+		const { user_name, password, first_name, last_name, email, phone } =
+			req.body;
 
-		if (!user || !pass || !first_name || !last_name || !email || !phone)
+		if (
+			!user_name ||
+			!password ||
+			!first_name ||
+			!last_name ||
+			!email ||
+			!phone
+		)
 			return res.json({ success: false, message: "INVALID_INFO" });
 
 		const emailRegistedCheck = await User.findOne({ email });
 		const phoneRegistedCheck = await User.findOne({ phone });
-		const userRegistedCheck = await User.findOne({ user_name: user });
+		const userRegistedCheck = await User.findOne({ user_name });
 
 		if (emailRegistedCheck)
 			return res.json({ sucess: false, message: "EMAIL_REGISTED" });
@@ -19,8 +27,8 @@ module.exports = {
 			return res.json({ sucess: false, message: "USER_REGISTED" });
 
 		res.locals.user = {
-			user,
-			pass,
+			user_name,
+			password,
 			first_name,
 			last_name,
 			email,

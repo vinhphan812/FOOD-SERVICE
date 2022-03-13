@@ -9,6 +9,7 @@ const cors = require("cors");
 
 // import route
 const apiRoute = require("./api/routers/index.route");
+const authRoute = require("./api/routers/auth.route");
 
 //import middleware
 const sessionMiddleware = require("./middlewares/session.middleware");
@@ -35,9 +36,14 @@ app.use(sessionMiddleware);
 
 // use route
 app.use("/api", apiRoute);
+app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
 	res.send("Service api Foodzie");
+});
+
+app.use((req, res, next) => {
+	res.json({ success: false, message: "NOT_FOUND" });
 });
 
 app.listen(PORT, () => {

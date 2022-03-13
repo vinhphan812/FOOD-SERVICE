@@ -20,7 +20,7 @@ router.get("/", (req, res, next) =>
 
 router.post("/login", loginHandle);
 
-router.post("/signIn", signUpValidate, signUpHandle);
+router.post("/signup", signUpValidate, signUpHandle);
 
 router.post("/forgot", forgotValidate, forgotHandle);
 
