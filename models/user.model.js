@@ -21,6 +21,7 @@ const userScheme = new Schema(
 		current_ranking: {
 			type: Schema.Types.ObjectId,
 			default: "6220f056e746d247310976e4",
+			ref: "RANKING",
 		},
 		score: { type: Number, default: 0 },
 		verify_code: { type: String, length: 4 },
