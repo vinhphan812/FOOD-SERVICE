@@ -3,18 +3,12 @@ const { SCHEMA_OPTION } = require("../utils/constant");
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const userScheme = new Schema(
+const userSchema = new Schema(
 	{
-		user_name: String,
+		username: String,
 		password: String,
 		email: String,
 		phone: String,
-		type: [
-			{
-				type: String,
-				enum: ["ADMIN", "MANAGER", "CUSTOMER", "SHIPPER", "SELLER"],
-			},
-		],
 		first_name: String,
 		last_name: String,
 		avatar: { type: String, default: "" },
@@ -26,12 +20,20 @@ const userScheme = new Schema(
 		score: { type: Number, default: 0 },
 		verify_code: { type: String, length: 4 },
 		isVerifyMail: { type: Boolean, default: false },
-		shipper_id: { type: Schema.Types.ObjectId, ref: "SHIPPER" },
-		restaurant_id: { type: Schema.Types.ObjectId, ref: "RESTAURANT" },
 	},
 	SCHEMA_OPTION
 );
 
-const User = mongoose.model("USER", userScheme, "USER");
+userSchema.static({
+	get: async function (id) {
+		return await this.findOne({ id }).populate(["current_ranking"]);
+	},
+	updateUser: async function (userId, $set) {
+		await this.updateOne({ id: userId }, { $set });
+		return this.get(userId);
+	},
+});
+
+const User = mongoose.model("USER", userSchema, "USER");
 
 module.exports = User;
