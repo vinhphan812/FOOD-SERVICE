@@ -1,14 +1,14 @@
 const User = require("../../models/user.model");
 
 module.exports = async (req, res, next) => {
-	const { userId, type } = req.signedCookies;
+	const { userId } = req.signedCookies;
 
-	if (!userId || !type)
-		return res.json({ success: false, messages: "FAIL_AUTHENTICATION" });
+	if (!userId)
+		return res.json({ success: false, message: "FAIL_AUTHENTICATION" });
 
-	const user = await User.findOne({ _id: userId });
+	const user = await User.get(userId);
 
-	if (!user) res.json({ success: false, messages: "FAIL_AUTHENTICATION" });
+	if (!user) res.json({ success: false, message: "FAIL_AUTHENTICATION" });
 
 	res.locals.user = user;
 
