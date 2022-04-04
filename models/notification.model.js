@@ -1,4 +1,4 @@
-const { SCHEMA_OPTION } = require("../utils/constant");
+const { SCHEMA_OPTION, ignoreModel, makeQuery } = require("../utils/constant");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
@@ -9,13 +9,27 @@ const NotificationSchema = new Schema(
 		content: String,
 		href: String,
 		is_delete: { type: Boolean, default: false },
-		type: {
-			type: Schema.Types.String,
-			enum: ["ORDER", "VOUCHER", "APP", "SHIPPER"],
-		},
+		recipient: { type: Schema.Types.ObjectId, ref: "USER" },
+		is_seen: { type: Boolean, default: false },
+		date: { type: Date, default: new Date() },
 	},
 	SCHEMA_OPTION
 );
+
+NotificationSchema.static({
+	getMyNotifications: function (recipient, is_delete, limit) {
+		const query = this.find(
+			makeQuery({ recipient }, is_delete),
+			ignoreModel(["recipient"])
+		);
+		return query.limit(limit == "all" ? undefined : limit ? limit : 10);
+	},
+	seen: async function (_id, is_seen = true) {
+		await this.updateMany(_id ? { _id } : {}, { $set: { is_seen } });
+
+		return _id ? "SEEN_SUCCESSFUL" : "SEEN_ALL_SUCCESSFUL";
+	},
+});
 
 const Notification = mongoose.model(
 	"NOTIFICATION",

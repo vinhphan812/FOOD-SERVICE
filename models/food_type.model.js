@@ -1,4 +1,4 @@
-const { SCHEMA_OPTION } = require("../utils/constant");
+const { SCHEMA_OPTION, makeQuery, ignoreModel } = require("../utils/constant");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
@@ -12,6 +12,12 @@ const FoodTypeSchema = new Schema(
 	},
 	SCHEMA_OPTION
 );
+
+FoodTypeSchema.static({
+	getAll: function () {
+		return this.find(makeQuery(), ignoreModel(["description"]));
+	},
+});
 
 const FoodType = mongoose.model("FOOD_TYPE", FoodTypeSchema, "FOOD_TYPE");
 
