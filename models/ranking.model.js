@@ -7,7 +7,7 @@ const RankingSchema = new Schema(
 	{
 		name: {
 			type: String,
-			enum: ["Thành Viên", "Bạc", "Vàng", "Bạc Kim", "Kim Cương"],
+			enum: ["Thành Viên", "Bạc", "Vàng", "Bạch Kim", "Kim Cương"],
 		},
 		min_exp: { type: Number, enum: [0, 1800, 7800, 18000, 38000] },
 		code: {
