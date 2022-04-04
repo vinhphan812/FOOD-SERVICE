@@ -1,6 +1,9 @@
 // environment config from .env
 require("dotenv").config();
 
+//require all model
+require("./models/require.model");
+
 // import module
 const express = require("express");
 const mongoose = require("mongoose");
