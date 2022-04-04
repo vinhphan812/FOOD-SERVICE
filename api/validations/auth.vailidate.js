@@ -2,11 +2,11 @@ const User = require("../../models/user.model");
 
 module.exports = {
 	signUpValidate: async (req, res, next) => {
-		const { user_name, password, first_name, last_name, email, phone } =
+		const { username, password, first_name, last_name, email, phone } =
 			req.body;
 
 		if (
-			!user_name ||
+			!username ||
 			!password ||
 			!first_name ||
 			!last_name ||
@@ -17,7 +17,7 @@ module.exports = {
 
 		const emailRegistedCheck = await User.findOne({ email });
 		const phoneRegistedCheck = await User.findOne({ phone });
-		const userRegistedCheck = await User.findOne({ user_name });
+		const userRegistedCheck = await User.findOne({ username });
 
 		if (emailRegistedCheck)
 			return res.json({ sucess: false, message: "EMAIL_REGISTED" });
@@ -27,7 +27,7 @@ module.exports = {
 			return res.json({ sucess: false, message: "USER_REGISTED" });
 
 		res.locals.user = {
-			user_name,
+			username,
 			password,
 			first_name,
 			last_name,
