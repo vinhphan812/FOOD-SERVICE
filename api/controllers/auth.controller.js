@@ -1,5 +1,8 @@
 const md5 = require("md5");
 const User = require("../../models/user.model");
+const ConfirmMail = require("../../models/confirm_mail.model");
+const Mailer = require("../../modules/mailer");
+const createVerifyCode = require("../../utils/verify_code");
 
 module.exports = {
 	loginHandle: async (req, res, next) => {
@@ -7,7 +10,7 @@ module.exports = {
 		let success = false;
 
 		const userData = await User.findOne({
-			$or: [{ user_name: user }, { email: user }, { phone: user }],
+			$or: [{ username: user }, { email: user }, { phone: user }],
 			password: md5(pass),
 		});
 
@@ -15,8 +18,6 @@ module.exports = {
 		else {
 			success = true;
 			res.cookie("userId", userData.id, { signed: true });
-			if (userData.type.length)
-				res.cookie("type", userData.type[0], { signed: true });
 		}
 
 		res.json({
@@ -39,7 +40,18 @@ module.exports = {
 		user.password = md5(user.password);
 		await User.create(user);
 
+		//! create verify code
+		const code = createVerifyCode();
+		const expires = new Date();
+
+		// expires = currentTime + 2 minutes
+		expires.setMinutes(expires.getMinutes() + 2);
+
+		ConfirmMail.create({ user_id: user.id, code, expires });
 		//! send mail
+
+		const mailer = await Mailer.init();
+		await mailer.sendMail([user.email]);
 
 		res.json({ success: true, message: "CREATE_ACCOUNT_SUCCESS" });
 	},
@@ -51,7 +63,7 @@ module.exports = {
 	},
 	loginAdmin: async (req, res, next) => {
 		const { id, type } = await User.findOne({
-			user_name: "system_admin",
+			username: "system_admin",
 		});
 
 		if (id) {

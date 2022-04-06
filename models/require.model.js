@@ -9,7 +9,6 @@ const Ranking = require("./ranking.model"),
 	Address = require("./address.model"),
 	User = require("./user.model"),
 	VirtualDisplayVoucher = require("./virtual_display_voucher.model"),
-	VirtualDisplayOrder = require("./virtual_display_order.model"),
 	Branch = require("./branch.model");
 
 module.exports = {
@@ -24,6 +23,5 @@ module.exports = {
 	Address,
 	User,
 	VirtualDisplayVoucher,
-	VirtualDisplayOrder,
 	Branch,
 };

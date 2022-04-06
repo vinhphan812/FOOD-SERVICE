@@ -1,4 +1,5 @@
 const { SCHEMA_OPTION } = require("../utils/constant");
+const Ranking = require("./ranking.model");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
@@ -31,6 +32,30 @@ userSchema.static({
 	updateUser: async function (userId, $set) {
 		await this.updateOne({ id: userId }, { $set });
 		return this.get(userId);
+	},
+});
+
+userSchema.method({
+	upScore: async function (total) {
+		const score = this.score + total * 0.001;
+		await this.updateOne({ score });
+		this.score = score;
+
+		const rankingList = await Ranking.find({});
+
+		for (const ranking of rankingList.reverse())
+			if (
+				this.score >= ranking.min_exp &&
+				ranking.id != this.current_ranking.id
+			) {
+				await this.updateOne({ current_ranking: ranking.id });
+
+				this.current_ranking = ranking;
+
+				//TODO: create Notification
+
+				break;
+			}
 	},
 });
 

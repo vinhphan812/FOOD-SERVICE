@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const orderDetailSchema = new Schema(
 	{
-		_id: { type: Schema.Types.ObjectId, ref: "ORDER" },
+		order_id: { type: Schema.Types.ObjectId, ref: "ORDER" },
 		food_id: { type: Schema.Types.ObjectId, ref: "FOOD" },
 		quantity: Number,
 	},

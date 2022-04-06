@@ -1,19 +1,24 @@
 const express = require("express");
 
-const {
-	changeRole,
-	getMe,
-	confirmMail,
-} = require("../controllers/user.controller");
+const ctrler = require("../controllers/user.controller");
 
 const router = express.Router();
 
 //{host}/api/user/
-router.get("/", getMe);
+router.route("/").get(ctrler.getMe).put(ctrler.updateMe);
 
-// {host:port}/api/user/change-role
-router.post("/change-role", changeRole);
-// {host:port}/api/user/confirm-mail
-router.post("/confirm-mail", confirmMail);
+router.get("/vouchers", ctrler.getMyVouchers);
+
+router.get("/notifications", ctrler.getMyNotifications);
+
+router.get("/history-orders", ctrler.getMyHistoryOrders);
+
+router.post("/seen-notifications", ctrler.seenNotifications);
+
+router.post("/orders", ctrler.createOrder);
+
+router.post("/upScore", ctrler.upScore);
+
+router.post("/confirm-mail", ctrler.confirmMail);
 
 module.exports = router;
