@@ -9,6 +9,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const { networkInterfaces } = require("os");
 
 // import route
 const apiRoute = require("./api/routers/index.route");
@@ -36,6 +37,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(sessionMiddleware);
+app.use(express.static("public"));
 
 // use route
 app.use("/api", apiRoute);
@@ -50,5 +52,7 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-	console.log("server run in port " + PORT);
+	const nets = networkInterfaces();
+
+	console.log(`server run in http:\/\/${nets["Wi-Fi"][1].address}:${PORT}`);
 });
