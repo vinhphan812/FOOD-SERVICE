@@ -26,6 +26,4 @@ router.post("/forgot", forgotValidate, forgotHandle);
 
 router.get("/logout", logoutHandle);
 
-router.get("/login", loginAdmin);
-
 module.exports = router;

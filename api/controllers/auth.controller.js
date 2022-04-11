@@ -36,18 +36,19 @@ module.exports = {
 	},
 	signUpHandle: async (req, res, next) => {
 		const { user } = res.locals;
-		user.type = ["CUSTOMER"];
+
 		user.password = md5(user.password);
+
 		await User.create(user);
 
 		//! create verify code
-		const code = createVerifyCode();
+		// const code = createVerifyCode();
 		const expires = new Date();
 
 		// expires = currentTime + 2 minutes
 		expires.setMinutes(expires.getMinutes() + 2);
 
-		ConfirmMail.create({ user_id: user.id, code, expires });
+		// ConfirmMail.create({ user_id: user.id, code, expires });
 		//! send mail
 
 		const mailer = await Mailer.init();
@@ -59,20 +60,6 @@ module.exports = {
 		res.clearCookie("userId").json({
 			success: true,
 			message: "LOGOUT_SUCCESS",
-		});
-	},
-	loginAdmin: async (req, res, next) => {
-		const { id, type } = await User.findOne({
-			username: "system_admin",
-		});
-
-		if (id) {
-			res.cookie("userId", id, { signed: true });
-			if (type.length) res.cookie("type", type[0], { signed: true });
-		}
-
-		res.json({
-			message: "SUCCESS_AUTHENTICATION",
 		});
 	},
 };
