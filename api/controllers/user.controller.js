@@ -136,4 +136,30 @@ module.exports = {
 		const result = await Voucher.checkValidAndDiscount(id);
 		res.json(result);
 	},
+	takeVoucher: async (req, res) => {
+		const { id } = req.body;
+		const { user } = res.locals;
+
+		const voucher = await Voucher.findOne({ _id: id });
+
+		const isValid = voucher.checkValid();
+
+		const takeLevel = voucher.checkTakeLevel(user.current_ranking.code);
+
+		if (isValid && takeLevel)
+			await VirtualDisplayVoucher.create({
+				user_id: user.id,
+				voucher_id: id,
+			});
+
+		res.json({
+			success: isValid && takeLevel,
+			message:
+				isValid && takeLevel
+					? "TAKE_VOUCHER_SUCCESS"
+					: takeLevel
+					? "TAKE_LEVEL_NOT_ENOUGH"
+					: "VOUCHER_INVALID",
+		});
+	},
 };

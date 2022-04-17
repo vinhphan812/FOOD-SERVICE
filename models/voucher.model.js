@@ -3,6 +3,8 @@ const { SCHEMA_OPTION, ignoreModel, makeQuery } = require("../utils/constant");
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+const levels = { NORMAL: 0, SILVER: 1, GOLD: 2, PLATINUM: 3, DIAMOND: 4 };
+
 const VoucherSchema = new Schema(
 	{
 		name: String,
@@ -20,6 +22,11 @@ const VoucherSchema = new Schema(
 		valid_date: { type: Date, default: new Date().setHours(24) },
 		min_price: { type: Number, default: 0 },
 		max_price: { type: Number, default: 0 },
+		min_user_level: {
+			type: String,
+			default: "NORMAL",
+			enum: ["NORMAL", "SILVER", "GOLD", "PLATINUM", "DIAMOND"],
+		},
 		is_delete: Boolean,
 	},
 	SCHEMA_OPTION
@@ -61,6 +68,9 @@ VoucherSchema.method({
 		return this.voucher_type == type
 			? "VOUCHER_CHECK_PASSED"
 			: "VOUCHER_CHECK_FAILED";
+	},
+	checkVoucherLevel: function (userLevel) {
+		return levels[this.min_user_level] >= levels[userLevel];
 	},
 	discountVoucher: function (price) {
 		let discountPrice = 0;

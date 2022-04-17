@@ -72,12 +72,14 @@ router.get("/vouchers", async (req, res) => {
 			is_delete: false,
 		},
 	];
+
 	const voucher = await Voucher.create(vouchersData);
-	for (const vou of voucher)
-		await VirtualDisplayVoucher.create({
-			user_id: "6245ea90bac86a45105c9487",
-			voucher_id: vou.id,
-		});
+
+	// for (const vou of voucher)
+	// 	await VirtualDisplayVoucher.create({
+	// 		user_id: "6245ea90bac86a45105c9487",
+	// 		voucher_id: vou.id,
+	// 	});
 
 	const data = await Voucher.getValid();
 	res.json({ success: true, data });
