@@ -1,4 +1,4 @@
-const { SCHEMA_OPTION } = require("../utils/constant");
+const { SCHEMA_OPTION, ignoreModel } = require("../utils/constant");
 const Ranking = require("./ranking.model");
 
 const mongoose = require("mongoose");
@@ -27,7 +27,9 @@ const userSchema = new Schema(
 
 userSchema.static({
 	get: async function (id) {
-		return await this.findOne({ id }).populate(["current_ranking"]);
+		return await this.findOne({ id }, ignoreModel(["password"])).populate(
+			["current_ranking"]
+		);
 	},
 	updateUser: async function (userId, $set) {
 		await this.updateOne({ id: userId }, { $set });

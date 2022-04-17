@@ -24,7 +24,7 @@ SessionStoreSchema.static({
 			store.data[food_id] = 1;
 		}
 
-		if (store.data[food_id] < 1) delete store.data[food_id];
+		if (!store.data[food_id]) delete store.data[food_id];
 
 		const { modifiedCount } = await this.updateOne(
 			{ _id: sessionId },

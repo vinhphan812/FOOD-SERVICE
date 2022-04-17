@@ -21,12 +21,12 @@ const OrderSchema = new Schema(
 		voucher_using: { type: Schema.Types.ObjectId, ref: "VOUCHER" },
 		is_delete: { type: Boolean, default: false },
 		delivery: String,
-		user_id: { type: Schema.Types.ObjectId, ref: "USER" },
+		user: { type: Schema.Types.ObjectId, ref: "USER" },
 		branch: { type: Schema.Types.ObjectId, ref: "BRANCH" },
 		status: {
 			type: String,
 			default: "PENDING",
-			enum: ["PENDING", "PREPARE", "SHIPPING", "DONE"],
+			enum: ["PENDING", "PREPARE", "SHIPPING", "DONE", "CANCEL"],
 		},
 		note: String,
 		shipping_fee: { type: Number, default: 0 },
@@ -38,7 +38,7 @@ const OrderSchema = new Schema(
 OrderSchema.static({
 	createOrder: async function (
 		sessionId,
-		user_id,
+		user,
 		branch,
 		note,
 		voucher_ship,
@@ -84,7 +84,8 @@ OrderSchema.static({
 		const myOrder = await this.create({
 			branch,
 			note,
-			user_id,
+			user,
+			shipping_fee: DEFAULT_SHIPPING_FEE,
 		});
 
 		// make order detail
@@ -129,17 +130,25 @@ OrderSchema.static({
 
 		//TODO: create NOTIFICATION
 
-		return { success: true, message: "ORDER_CREATED_SUCCESS", total };
+		return {
+			success: true,
+			message: "ORDER_CREATED_SUCCESS",
+			total,
+			order_id: myOrder.id,
+		};
 	},
-	getOrder: async function (_id) {
-		const orders = await this.find({ _id }, ignoreModel());
-
-		// const details = await OrderDetail.find(
-		// 	{ order_id: order.id },
-		// 	ignoreModel()
-		// );
+	getOrders: async function (user) {
+		const orders = await this.find({ user }, ignoreModel());
 
 		return orders;
+	},
+	getOrderDetail: async function (_id) {
+		const order = await this.findOne({ _id });
+		order._doc.details = await OrderDetail.find(
+			{ order_id: order.id },
+			ignoreModel(["created_at", "updated_at", "order_id", "_id"])
+		).populate("food_id");
+		return order;
 	},
 });
 

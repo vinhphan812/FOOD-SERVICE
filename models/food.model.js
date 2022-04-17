@@ -20,8 +20,13 @@ const FoodSchema = new Schema(
 );
 
 FoodSchema.static({
+	get: function (_id) {
+		return this.findOne(makeQuery({ _id }), ignoreModel()).populate(
+			"type"
+		);
+	},
 	getAll: function () {
-		return this.find(makeQuery(), ignoreModel());
+		return this.find(makeQuery(), ignoreModel()).populate("type");
 	},
 });
 

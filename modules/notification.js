@@ -1,21 +1,12 @@
 const Notification = require("../models/notification.model");
-const VirtualDisplayNotification = require("../models/virtual_display_notification.model");
+const Order = require("../models/order.model");
 
-module.exports = {
-	createNotification: (
-		displayIds,
-		data = { title, content, href },
-		referenceId
-	) => {
+module.exports = class NotificationFactory {
+	constructor() {}
+	static createNotify(data = { title, content, href, recipient }) {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const notification = await Notification.create(data);
-				for (const user_id of displayIds) {
-					await VirtualDisplayNotification.create({
-						user_id,
-						notify_id: notification.id,
-					});
-				}
 				resolve({
 					success: true,
 					message: "CREATE_NOTIFICATION_SUCCESS",
@@ -24,5 +15,15 @@ module.exports = {
 				reject({ success: false, message });
 			}
 		});
-	},
+	}
+	static forOrder(_id) {
+		return new Promise(async (resolve, reject) => {
+			const order = await Order.findOne({ _id });
+
+
+			const title = ""
+
+			Notification.create({})
+		});
+	}
 };

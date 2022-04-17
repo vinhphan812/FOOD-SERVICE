@@ -15,6 +15,13 @@ module.exports = {
 			res.json({ success: false, message });
 		}
 	},
+	getFoodDetail: async (req, res) => {
+		const { id } = req.params;
+
+		const data = await Food.get(id);
+
+		res.json({ success: true, data });
+	},
 	getFoodsType: async (req, res) => {
 		try {
 			const data = await FoodType.getAll();
@@ -34,6 +41,15 @@ module.exports = {
 	addToCart: async (req, res) => {
 		const { food, type } = req.body;
 		const { sessionId } = res.locals;
+
+		if (food.length != 24)
+			return res.json({ success: false, message: "ID_INVALID" });
+
+		if (!(await Food.findOne({ _id: food })))
+			return res.json({
+				success: false,
+				message: "FOOD_NOT_CONTAINT",
+			});
 
 		const message = await SessionStore.addCart(sessionId, food, type);
 		res.json({ success: true, message });

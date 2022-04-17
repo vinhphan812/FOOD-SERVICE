@@ -33,6 +33,21 @@ VoucherSchema.static({
 			return r;
 		}, []);
 	},
+	checkValidAndDiscount: async function (_id, price) {
+		const voucher = await this.find(makeQuery({ _id }));
+
+		if (!voucher.checkValid())
+			return { success: false, message: "VOUCHER_INVALID" };
+
+		const discount = voucher.discountVoucher(price);
+
+		return {
+			success: typeof discount === "string",
+			...(typeof discount == "string"
+				? { message: discount }
+				: { data: { discount } }),
+		};
+	},
 });
 
 VoucherSchema.method({

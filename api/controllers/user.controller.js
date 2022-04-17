@@ -5,7 +5,9 @@ const {
 	VirtualDisplayVoucher,
 	Notification,
 	Order,
+	Voucher,
 } = require("../../models/require.model");
+const NotificationFactory = require("../../modules/notification");
 
 module.exports = {
 	getMe: (req, res, next) => {
@@ -32,7 +34,7 @@ module.exports = {
 		const { is_delete } = req.query;
 		const { user } = res.locals;
 
-		const myHistoryOrder = await Order.getOrder(user.id, !!is_delete);
+		const myHistoryOrder = await Order.getOrders(user.id, !!is_delete);
 
 		res.json({ success: true, data: myHistoryOrder });
 	},
@@ -49,9 +51,9 @@ module.exports = {
 	},
 
 	seenNotifications: async (req, res, next) => {
-		const { notify_ids, is_seen } = req.body;
+		const { notify_ids } = req.body;
 
-		const message = await Notification.seen(notify_ids, !!is_seen);
+		const message = await Notification.seen(notify_ids);
 
 		res.json({ success: true, message });
 	},
@@ -96,7 +98,7 @@ module.exports = {
 		const { user, sessionId } = res.locals;
 		const { branch, note, voucher_ship, voucher_using } = req.body;
 
-		const { success, message, total } = await Order.createOrder(
+		const { success, message, total, order_id } = await Order.createOrder(
 			sessionId,
 			user.id,
 			branch,
@@ -108,6 +110,7 @@ module.exports = {
 		//TODO: create order success up score => up ranking
 		if (success) {
 			user.upScore(total);
+			NotificationFactory.forOrder(order_id);
 		}
 
 		res.json({ success, message });
@@ -119,5 +122,18 @@ module.exports = {
 		await user.upScore(total);
 
 		res.json({ success: true, data: user });
+	},
+	getOrderDetail: async (req, res) => {
+		const { id } = req.params;
+
+		const order = await Order.getOrderDetail({ _id: id });
+
+		res.json({ success: true, data: order });
+	},
+	checkVoucher: async (req, res) => {
+		const { id } = req.params;
+
+		const result = await Voucher.checkValidAndDiscount(id);
+		res.json(result);
 	},
 };

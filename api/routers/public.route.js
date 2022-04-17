@@ -12,15 +12,17 @@ const {
 	getBranchs,
 	addToCart,
 	getCart,
+	getFoodDetail,
 } = require("../controllers/public.controller");
 const { verifyMail } = require("../../utils/template.mail");
 const Voucher = require("../../models/voucher.model");
-const Branch = require("../../models/branch.model");
 
 const router = express.Router();
 
 // {host}/api/*
 router.get("/foods", getFoods);
+
+router.get("/foods/:id", idValidation, getFoodDetail);
 
 router.get("/food-type", getFoodsType);
 
@@ -89,7 +91,7 @@ router.get("/discount/:id", async function (req, res) {
 	res.json({ count: voucher.discountVoucher(25000) });
 });
 
-router.get("/branchs", getBranchs);
+router.get("/branches", getBranchs);
 
 router.route("/cart").get(getCart).post(addToCart);
 
@@ -103,34 +105,5 @@ router.get("/mail", async (req, res) => {
 	);
 	res.json({ mailer });
 });
-
-// router.get("/branches", async (req, res) => {
-// 	await Branch.create([
-// 		{
-// 			address: "824/13 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Sư Vạn Hạnh",
-// 		},
-// 		{
-// 			address: "122 Tô Hiến Thành, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Tô Hiến Thành",
-// 		},
-// 		{
-// 			address: "295/1 Lý Thường Kiệt, P.15, Quận 11, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Lý Thường Kiệt",
-// 		},
-// 		{
-// 			address: "234 Lê Văn Sỹ, Phường 1, Tân Bình, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Lê Văn Sỹ",
-// 		},
-// 		{
-// 			address: "11A Tự Lập, Phường 4, Tân Bình, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Tự Lập",
-// 		},
-// 		{
-// 			address: "230 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh",
-// 			name: "Foozie Chi Nhánh Âu Dương Lân",
-// 		},
-// 	]);
-// });
 
 module.exports = router;
