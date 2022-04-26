@@ -26,14 +26,15 @@ const userSchema = new Schema(
 );
 
 userSchema.static({
-	get: async function (id) {
-		return await this.findOne({ id }, ignoreModel(["password"])).populate(
-			["current_ranking"]
-		);
+	get: async function (_id) {
+		return await this.findOne(
+			{ _id },
+			ignoreModel(["password"])
+		).populate(["current_ranking"]);
 	},
-	updateUser: async function (userId, $set) {
-		await this.updateOne({ id: userId }, { $set });
-		return this.get(userId);
+	updateUser: async function (_id, $set) {
+		await this.updateOne({ _id }, { $set });
+		return this.get(_id);
 	},
 });
 
