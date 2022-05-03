@@ -50,7 +50,7 @@ module.exports = {
 				success: false,
 				message: "FOOD_NOT_CONTAINT",
 			});
-
+		// type is a [INCREASEMENT, DECREASEMENT]
 		const message = await SessionStore.addCart(sessionId, food, type);
 		res.json({ success: true, message });
 	},
