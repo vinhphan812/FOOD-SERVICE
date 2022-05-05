@@ -7,9 +7,11 @@ const SessionStore = require("../../models/session_store.model");
 module.exports = {
 	getFoods: async (req, res) => {
 		try {
-			const { id } = req.params;
+			const { type } = req.query;
 
-			const data = await Food.getAll();
+			const data = type
+				? await Food.getFoodWithType(type)
+				: await Food.getAll();
 			res.json({ success: true, data });
 		} catch ({ message }) {
 			res.json({ success: false, message });

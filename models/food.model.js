@@ -28,6 +28,9 @@ FoodSchema.static({
 	getAll: function () {
 		return this.find(makeQuery(), ignoreModel()).populate("type");
 	},
+	getFoodWithType: function (type) {
+		return this.find(makeQuery({ type }), ignoreModel()).populate("type");
+	},
 });
 
 const Food = mongoose.model("FOOD", FoodSchema, "FOOD");
