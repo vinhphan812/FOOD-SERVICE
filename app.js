@@ -4,7 +4,7 @@ require("dotenv").config();
 //require all model
 require("./models/require.model");
 
-// import module
+// import modules
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -14,9 +14,6 @@ const { networkInterfaces } = require("os");
 // import route
 const apiRoute = require("./api/routers/index.route");
 const authRoute = require("./api/routers/auth.route");
-
-//import middleware
-const sessionMiddleware = require("./middlewares/session.middleware");
 
 // get PORT
 const PORT = process.env.port || 3000;
@@ -36,7 +33,6 @@ app.use(cookieParser(process.env.SECRET_KEY));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(sessionMiddleware);
 app.use(express.static("public"));
 
 // use route

@@ -95,8 +95,6 @@ router.get("/discount/:id", async function (req, res) {
 
 router.get("/branches", getBranchs);
 
-router.route("/cart").get(getCart).post(addToCart);
-
 router.get("/mail", async (req, res) => {
 	const mailer = await Mailer.init();
 

@@ -2,16 +2,22 @@ const Food = require("../../models/food.model");
 const FoodType = require("../../models/food_type.model");
 const Branch = require("../../models/branch.model");
 const { ignoreModel } = require("../../utils/constant");
-const SessionStore = require("../../models/session_store.model");
+const SessionStore = require("../../models/store.model");
 
 module.exports = {
 	getFoods: async (req, res) => {
 		try {
-			const { type } = req.query;
+			const { type, query } = req.query;
+			const reg = query ? new RegExp(query, "i") : "";
+			let data =
+				!type || type == "6276897ef868ab574afb3cd2"
+					? await Food.getAll()
+					: await Food.getFoodWithType(type);
 
-			const data = type
-				? await Food.getFoodWithType(type)
-				: await Food.getAll();
+			if (!!reg) {
+				data = data.filter((food) => reg.test(food.name));
+			}
+
 			res.json({ success: true, data });
 		} catch ({ message }) {
 			res.json({ success: false, message });
@@ -38,29 +44,6 @@ module.exports = {
 			{},
 			ignoreModel(["created_at", "updated_at"])
 		);
-		res.json({ success: true, data });
-	},
-	addToCart: async (req, res) => {
-		const { food, type } = req.body;
-		const { sessionId } = res.locals;
-
-		if (food.length != 24)
-			return res.json({ success: false, message: "ID_INVALID" });
-
-		if (!(await Food.findOne({ _id: food })))
-			return res.json({
-				success: false,
-				message: "FOOD_NOT_CONTAINT",
-			});
-		// type is a [INCREASEMENT, DECREASEMENT]
-		const message = await SessionStore.addCart(sessionId, food, type);
-		res.json({ success: true, message });
-	},
-	getCart: async (req, res) => {
-		const { sessionId } = res.locals;
-
-		const data = await SessionStore.getCart(sessionId);
-
 		res.json({ success: true, data });
 	},
 };

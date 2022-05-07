@@ -6,6 +6,8 @@ const {
 	Notification,
 	Order,
 	Voucher,
+	Store,
+	Food,
 } = require("../../models/require.model");
 const NotificationFactory = require("../../modules/notification");
 
@@ -161,5 +163,28 @@ module.exports = {
 					? "TAKE_LEVEL_NOT_ENOUGH"
 					: "VOUCHER_INVALID",
 		});
+	},
+	addToCart: async (req, res) => {
+		const { food, type } = req.body;
+		const { userId } = res.locals;
+
+		if (food.length != 24)
+			return res.json({ success: false, message: "ID_INVALID" });
+
+		if (!(await Food.findOne({ _id: food })))
+			return res.json({
+				success: false,
+				message: "FOOD_NOT_CONTAINT",
+			});
+		// type is a [INCREASEMENT, DECREASEMENT]
+		const message = await Store.addCart(userId, food, type);
+		res.json({ success: true, message });
+	},
+	getCart: async (req, res) => {
+		const { userId } = res.locals;
+
+		const data = await Store.getCart(userId);
+
+		res.json({ success: true, data });
 	},
 };

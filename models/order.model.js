@@ -6,7 +6,7 @@ const {
 
 const mongoose = require("mongoose");
 
-const SessionStore = require("./session_store.model");
+const SessionStore = require("./store.model");
 const OrderDetail = require("./order_detail.model");
 const Voucher = require("./voucher.model");
 const Food = require("./food.model");

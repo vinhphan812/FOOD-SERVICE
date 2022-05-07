@@ -27,4 +27,6 @@ router.post("/check-voucher/:id", ctrler.checkVoucher);
 
 router.post("/confirm-mail", ctrler.confirmMail); // no complete
 
+router.route("/cart").get(ctrler.getCart).post(ctrler.addToCart);
+
 module.exports = router;

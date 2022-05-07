@@ -25,7 +25,7 @@ FoodSchema.static({
 			"type"
 		);
 	},
-	getAll: function () {
+	getAll: function (query) {
 		return this.find(makeQuery(), ignoreModel()).populate("type");
 	},
 	getFoodWithType: function (type) {

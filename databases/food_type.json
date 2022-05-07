@@ -1,6 +1,15 @@
 [
 	{
 		"_id": {
+			"$oid": "6276897ef868ab574afb3cd2"
+		},
+		"name": "Tất cả",
+		"code": "ALL",
+		"is_delete": false,
+		"description": ""
+	},
+	{
+		"_id": {
 			"$oid": "6220ef39e746d247310976dc"
 		},
 		"name": "Cơm",
