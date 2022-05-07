@@ -1,1146 +1,1045 @@
-[
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7360"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm gà chiên mắm tỏi",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7361"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm gà xối mỡ",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7362"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm dương châu đùi mắm tỏi",
-		"description": "",
-		"thumbnail": "",
-		"price": 57000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7363"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm gà ta",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7364"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm gà hấp muối",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7365"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm ba rọi chiên tỏi",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7366"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm chiên hải sản",
-		"description": "",
-		"thumbnail": "",
-		"price": 48000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7367"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm sườn xào chua ngọt",
-		"description": "",
-		"thumbnail": "",
-		"price": 45000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7368"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm bò lúc lắc",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7369"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm chiên dương châu",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736a"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm bò xào bông cải",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736b"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm mực chiên giòn",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736c"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm mực xào Sa tế",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736d"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm cật xào bông cải",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736e"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm tôm chiên giòn",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e736f"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm bò xào Sa tế",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7370"
-		},
-		"type": {
-			"$oid": "6220ef39e746d247310976dc"
-		},
-		"name": "Cơm bò lúc lắc",
-		"description": "",
-		"thumbnail": "",
-		"price": 43000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7371"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì trộn thập cẩm",
-		"description": "",
-		"thumbnail": "",
-		"price": 46000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7372"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì trộn gà mắm tỏi",
-		"description": "",
-		"thumbnail": "",
-		"price": 46000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7373"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì trộn ba rọi",
-		"description": "",
-		"thumbnail": "",
-		"price": 46000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7374"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì trộn gà xối mỡ",
-		"description": "",
-		"thumbnail": "",
-		"price": 46000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7375"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì trộn xá xíu",
-		"description": "",
-		"thumbnail": "",
-		"price": 46000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7376"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì xào giòn",
-		"description": "",
-		"thumbnail": "",
-		"price": 53000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7377"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì cánh",
-		"description": "",
-		"thumbnail": "",
-		"price": 60000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7378"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì lòng trứng non",
-		"description": "",
-		"thumbnail": "",
-		"price": 70000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7379"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì gà lớn",
-		"description": "",
-		"thumbnail": "",
-		"price": 70000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737a"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì gà tô thường",
-		"description": "",
-		"thumbnail": "",
-		"price": 55000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737b"
-		},
-		"type": {
-			"$oid": "6220ef8de746d247310976dd"
-		},
-		"name": "Mì không",
-		"description": "",
-		"thumbnail": "",
-		"price": 30000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737c"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở bò tái",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737d"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở bò nạm",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737e"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở tái nạm",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e737f"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở thập cẩm",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 80000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7380"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở đặc biệt",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 98000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7381"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở gầu bò",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7382"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở vè",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7383"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở bò viên",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7384"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở tái viên",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7385"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở bắp đặc biệt",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 98000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7386"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở tái gân",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7387"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở tái nạm gầu",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 98000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7388"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở thịt nhừ",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7389"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở lá sách",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738a"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở tái nạm viên",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738b"
-		},
-		"type": {
-			"$oid": "6221b3b6e746d247310976f4"
-		},
-		"name": "Phở gân bò",
-		"description": "Đã bao gồm chi phí đóng gói và tiền hộp",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738c"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà tắm nước mắm",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 44000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738d"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà rán giòn cay",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 38000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738e"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà rán giòn không cay",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 38000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e738f"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà giòn không xương 5 miếng",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 75000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7390"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà giòn không xương 3 miềng",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 55000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7391"
-		},
-		"type": {
-			"$oid": "6221b3d8e746d247310976f5"
-		},
-		"name": "Gà tắm nước mắm",
-		"description": "(Phần gà được phục vụ ngẫu nhiên).",
-		"thumbnail": "",
-		"price": 44000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7392"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm chay thập cẩm",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7393"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm chay đậu hũ chiên xả",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7394"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm khô sườn non chay",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7395"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm chay khổ qua ram mè",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7396"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm sườn ram cay chay",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7397"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm đùi gà xả chay",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7398"
-		},
-		"type": {
-			"$oid": "6220efe0e746d247310976df"
-		},
-		"name": "Cơm chay đậu hũ ki kho",
-		"description": "Bao gồm dụng cụ ăn.",
-		"thumbnail": "",
-		"price": 27000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e7399"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bánh xèo Nhật size vừa",
-		"description": "",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739a"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bánh xèo Nhật size lớn",
-		"description": "",
-		"thumbnail": "",
-		"price": 279000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739b"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bánh xèo Nhật size nhỏ",
-		"description": "",
-		"thumbnail": "",
-		"price": 99000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739c"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bánh xèo Nhật size vừa",
-		"description": "",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739d"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà phô mai size vừa",
-		"description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
-		"thumbnail": "",
-		"price": 179000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739e"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà phô mai size nhỏ",
-		"description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
-		"thumbnail": "",
-		"price": 89000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e739f"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà phô mai size lớn",
-		"description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
-		"thumbnail": "",
-		"price": 269000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a0"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza phô mai hảo hạng size vừa",
-		"description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
-		"thumbnail": "",
-		"price": 159000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a1"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza phô mai hảo hạng size nhỏ",
-		"description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
-		"thumbnail": "",
-		"price": 79000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a2"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza phô mai hảo hạng size lớn",
-		"description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
-		"thumbnail": "",
-		"price": 249000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a3"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza dăm bông dứa kiểu Hawaii size vừa",
-		"description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
-		"thumbnail": "",
-		"price": 159000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a4"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza dăm bông dứa kiểu Hawaii size nhỏ",
-		"description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
-		"thumbnail": "",
-		"price": 79000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a5"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza dăm bông dứa kiểu Hawaii size lớn",
-		"description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
-		"thumbnail": "",
-		"price": 249000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a6"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza rau củ thập cẩm size vừa",
-		"description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
-		"thumbnail": "",
-		"price": 159000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a7"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza rau củ thập cẩm size nhỏ",
-		"description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
-		"thumbnail": "",
-		"price": 79000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a8"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza rau củ thập cẩm size lớn",
-		"description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
-		"thumbnail": "",
-		"price": 249000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73a9"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza hải sản nhiệt đới sốt tiêu size vừa",
-		"description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73aa"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza hải sản nhiệt đới sốt tiêu size nhỏ",
-		"description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
-		"thumbnail": "",
-		"price": 109000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73ab"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza hải sản nhiệt đới sốt tiêu size lớn",
-		"description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
-		"thumbnail": "",
-		"price": 309000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73ac"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò & tôm nướng kiểu Mỹ size vừa",
-		"description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73ad"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò & tôm nướng kiểu Mỹ size nhỏ",
-		"description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
-		"thumbnail": "",
-		"price": 109000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73ae"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò & tôm nướng kiểu Mỹ size lớn",
-		"description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
-		"thumbnail": "",
-		"price": 309000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73af"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza xúc xích Ý truyền thống size vừa",
-		"description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b0"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza xúc xích Ý truyền thống size nhỏ",
-		"description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
-		"thumbnail": "",
-		"price": 109000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b1"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza xúc xích Ý truyền thống size lớn",
-		"description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
-		"thumbnail": "",
-		"price": 309000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b2"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà sốt tương kiểu Nhật size vừa",
-		"description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
-		"thumbnail": "",
-		"price": 189000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b3"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà sốt tương kiểu Nhật size nhỏ",
-		"description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
-		"thumbnail": "",
-		"price": 109000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b4"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza gà sốt tương kiểu Nhật size lớn",
-		"description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
-		"thumbnail": "",
-		"price": 309000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b5"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò Mexico thượng hạng size vừa",
-		"description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
-		"thumbnail": "",
-		"price": 249000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b6"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò Mexico thượng hạng size nhỏ",
-		"description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
-		"thumbnail": "",
-		"price": 169000,
-		"is_delete": false
-	},
-	{
-		"_id": {
-			"$oid": "62263546c44f38a0f56e73b7"
-		},
-		"type": {
-			"$oid": "6221b408e746d247310976f6"
-		},
-		"name": "Pizza bò Mexico thượng hạng size lớn",
-		"description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
-		"thumbnail": "",
-		"price": 369000,
-		"is_delete": false
-	}
-]
+[{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7360"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm gà chiên mắm tỏi",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_ga_mam_toi.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7361"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm gà xối mỡ",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_ga_xoi_mo.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7362"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm dương châu đùi mắm tỏi",
+  "description": "",
+  "thumbnail": "/images/foods/com/duong_chau_ga_mam_toi.jpg",
+  "price": 57000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7363"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm gà ta",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_ga_ta.jpeg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7364"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm gà hấp muối",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_ga_hap_muoi.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7365"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm ba rọi chiên tỏi",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_ba_roi_mam_toi.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7366"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm chiên hải sản",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_hai_san.jpg",
+  "price": 48000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7367"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm sườn xào chua ngọt",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_suon_xao_chua_ngot.jpg",
+  "price": 45000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7368"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm bò lúc lắc",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_bo_luc_lac.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7369"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm chiên dương châu",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_suon_xao_chua_ngot.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736a"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm bò xào bông cải",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_bo-xao_bong_cai.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736b"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm mực chiên giòn",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_muc_chien_gion.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736c"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm mực xào Sa tế",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_muc_xao_sate.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736d"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm cật xào bông cải",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_cat_xao_bong_cai.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736e"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm tôm chiên giòn",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_tom_chien_gion.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e736f"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm bò xào Sa tế",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_bo_xao_sate.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7370"
+  },
+  "type": {
+    "$oid": "6220ef39e746d247310976dc"
+  },
+  "name": "Cơm bò lúc lắc",
+  "description": "",
+  "thumbnail": "/images/foods/com/com_bo_luc_lac.jpg",
+  "price": 43000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7371"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì trộn thập cẩm",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_tron_thap_cam.jpg",
+  "price": 46000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7372"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì trộn gà mắm tỏi",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_tron_ga_mam_toi.jpg",
+  "price": 46000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7373"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì trộn ba rọi",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_tron_ba_roi.jpeg",
+  "price": 46000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7374"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì trộn gà xối mỡ",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_tron_ga_xoi_mo.jpeg",
+  "price": 46000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7375"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì trộn xá xíu",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_tron_xa_xiu.jpg",
+  "price": 46000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7376"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì xào giòn",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_xao_gion.jpg",
+  "price": 53000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7377"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì cánh",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_canh.jpg",
+  "price": 60000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7378"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì lòng trứng non",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_long_trung_non.jpg",
+  "price": 70000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7379"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì gà lớn",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_ga_lon.jpg",
+  "price": 70000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737a"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì gà tô thường",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_ga_to_thuong.jpg",
+  "price": 55000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737b"
+  },
+  "type": {
+    "$oid": "6220ef8de746d247310976dd"
+  },
+  "name": "Mì không",
+  "description": "",
+  "thumbnail": "/images/foods/mi/mi_khong.jpg",
+  "price": 30000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737c"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở bò tái",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_bo_tai.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737d"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở bò nạm",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_bo_nam.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737e"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở tái nạm",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_tai_nam.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e737f"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở thập cẩm",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_thap_cam.jpg",
+  "price": 80000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7380"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở đặc biệt",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_dac_biet.jpg",
+  "price": 98000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7381"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở gầu bò",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_gau_bo.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7382"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở vè",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_ve.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7383"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở bò viên",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_bo_vien.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7384"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở tái viên",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_tai_vien.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7385"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở bắp đặc biệt",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_bap_dac_biet.jpg",
+  "price": 98000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7386"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở tái gân",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_tai_gan.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7387"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở tái nạm gầu",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_tai_nam_gau.jpg",
+  "price": 98000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7388"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở thịt nhừ",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_thit_nhu.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7389"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở lá sách",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_la_sach.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738a"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở tái nạm viên",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_tai_nam_vien.jpg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738b"
+  },
+  "type": {
+    "$oid": "6221b3b6e746d247310976f4"
+  },
+  "name": "Phở gân bò",
+  "description": "Đã bao gồm chi phí đóng gói và tiền hộp",
+  "thumbnail": "/images/foods/pho/pho_gan_bo.jpeg",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738c"
+  },
+  "type": {
+    "$oid": "6221b3d8e746d247310976f5"
+  },
+  "name": "Gà tắm nước mắm",
+  "description": "(Phần gà được phục vụ ngẫu nhiên).",
+  "thumbnail": "/images/foods/ga/ga_tam_nuoc_mam.png",
+  "price": 44000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738d"
+  },
+  "type": {
+    "$oid": "6221b3d8e746d247310976f5"
+  },
+  "name": "Gà rán giòn cay",
+  "description": "(Phần gà được phục vụ ngẫu nhiên).",
+  "thumbnail": "/images/foods/ga/ga_ran_gion_cay.jpg",
+  "price": 38000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738e"
+  },
+  "type": {
+    "$oid": "6221b3d8e746d247310976f5"
+  },
+  "name": "Gà rán giòn không cay",
+  "description": "(Phần gà được phục vụ ngẫu nhiên).",
+  "thumbnail": "/images/foods/ga/ga_ran_gion_khong_cay.png",
+  "price": 38000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e738f"
+  },
+  "type": {
+    "$oid": "6221b3d8e746d247310976f5"
+  },
+  "name": "Gà giòn không xương 5 miếng",
+  "description": "(Phần gà được phục vụ ngẫu nhiên).",
+  "thumbnail": "/images/foods/ga/ga_gion_khong_xuong_5_mieng.png",
+  "price": 75000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7390"
+  },
+  "type": {
+    "$oid": "6221b3d8e746d247310976f5"
+  },
+  "name": "Gà giòn không xương 3 miềng",
+  "description": "(Phần gà được phục vụ ngẫu nhiên).",
+  "thumbnail": "/images/foods/ga/ga_gion_khong_xuong_3_mieng.png",
+  "price": 55000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7392"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm chay thập cẩm",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_chay_thap_cam.jpeg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7393"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm chay đậu hũ chiên xả",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_chay_dau_hu_chien_xa.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7394"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm khô sườn non chay",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/suon_non_chay.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7395"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm chay khổ qua ram mè",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_chay_kho_qua_ram_me.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7396"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm sườn ram cay chay",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_suon_ram_cay_chay.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7397"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm đùi gà xả chay",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_dui_ga_sa_chay.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7398"
+  },
+  "type": {
+    "$oid": "6220efe0e746d247310976df"
+  },
+  "name": "Cơm chay đậu hũ ki kho",
+  "description": "Bao gồm dụng cụ ăn.",
+  "thumbnail": "/images/foods/com/com_chay_dau_hu_ki_kho.jpg",
+  "price": 27000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e7399"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bánh xèo Nhật size vừa",
+  "description": "",
+  "thumbnail": "/images/foods/pizza/pizza_banh_xeo_nhat.jpg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739a"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bánh xèo Nhật size lớn",
+  "description": "",
+  "thumbnail": "/images/foods/pizza/pizza_banh_xeo_nhat.jpeg",
+  "price": 279000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739b"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bánh xèo Nhật size nhỏ",
+  "description": "",
+  "thumbnail": "/images/foods/pizza/pizza_banh_xeo_nhat.jpeg",
+  "price": 99000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739c"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bánh xèo Nhật size vừa",
+  "description": "",
+  "thumbnail": "/images/foods/pizza/pizza_banh_xeo_nhat.jpeg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739d"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà phô mai size vừa",
+  "description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
+  "thumbnail": "/images/foods/pizza/pizza_ga_phomai.jpg",
+  "price": 179000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739e"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà phô mai size nhỏ",
+  "description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
+  "thumbnail": "/images/foods/pizza/pizza_ga_phomai.jpg",
+  "price": 89000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e739f"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà phô mai size lớn",
+  "description": "Pizza Cheesy Chicken Bacon- size M. Gà tươi mọng nướng, với lớp vỏ ngoài vàng óng được phô mai Mozzarella 'bao bọc' giúp bánh không bị khô sau khi nướng, và những miếng thịt xông khói mặn mặn trung hòa với vị ngọt béo từ phô mai.",
+  "thumbnail": "/images/foods/pizza/pizza_ga_phomai.jpg",
+  "price": 269000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a0"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza phô mai hảo hạng size vừa",
+  "description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
+  "thumbnail": "/images/foods/pizza/pizza_phomai.jpg",
+  "price": 159000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a1"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza phô mai hảo hạng size nhỏ",
+  "description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
+  "thumbnail": "/images/foods/pizza/pizza_phomai.jpg",
+  "price": 79000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a2"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza phô mai hảo hạng size lớn",
+  "description": "Pizza Cheese Mania - size M. Chiếc pizza đặc trưng cổ điển cho bất cứ tín đồ pizza nào. Tầng trên là lớp phô mai vàng óng thơm dẻo như mời gọi, tầng dưới là lớp sốt cà chua trung hòa với vị béo của phô mai Mozarella giúp chiếc pizza không bị ngấy.",
+  "thumbnail": "/images/foods/pizza/pizza_phomai.jpg",
+  "price": 249000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a3"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza dăm bông dứa kiểu Hawaii size vừa",
+  "description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
+  "thumbnail": "/images/foods/pizza/pizza_hawaii.jpeg",
+  "price": 159000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a4"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza dăm bông dứa kiểu Hawaii size nhỏ",
+  "description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
+  "thumbnail": "/images/foods/pizza/pizza_hawaii.jpeg",
+  "price": 79000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a5"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza dăm bông dứa kiểu Hawaii size lớn",
+  "description": "Pizza Hawaiian - size M. Dăm bông ăn với dứa chua chua ngọt ngọt kèm phô mai Mozzarella dai dai beo béo quyện cùng vị chua nhẹ thơm phức của sốt cà chua - Hương vị của Hawaii gói gọn trong chiếc bánh pizza to tròn đầy nhân ú ụ.",
+  "thumbnail": "/images/foods/pizza/pizza_hawaii.jpeg",
+  "price": 249000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a6"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza rau củ thập cẩm size vừa",
+  "description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
+  "thumbnail": "/images/foods/pizza/pizza_rau_cu.jpg",
+  "price": 159000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a7"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza rau củ thập cẩm size nhỏ",
+  "description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
+  "thumbnail": "/images/foods/pizza/pizza_rau_cu.jpg",
+  "price": 79000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a8"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza rau củ thập cẩm size lớn",
+  "description": "Pizza Vigge Mania - size M. PIZZA CHAY với sự hòa trộn hương vị rau củ vô cùng độc đáo. Vị ngọt thanh của hành tây, nấm mỡ và thơm, vị hơi cay cay của những miếng ớt chuông giòn rụm cùng vị chua từ những miếng cà chua đỏ au trên miếng bánh.",
+  "thumbnail": "/images/foods/pizza/pizza_rau_cu.jpg",
+  "price": 249000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73a9"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza hải sản nhiệt đới sốt tiêu size vừa",
+  "description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
+  "thumbnail": "/images/foods/pizza/pizza_hai_san_nhiet_doi.jpeg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73aa"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza hải sản nhiệt đới sốt tiêu size nhỏ",
+  "description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
+  "thumbnail": "/images/foods/pizza/pizza_hai_san_nhiet_doi.jpeg",
+  "price": 109000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73ab"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza hải sản nhiệt đới sốt tiêu size lớn",
+  "description": "Pizzamin Sea - size M. Sốt tiêu đen thơm nồng, đậm vị, hơi the, rắc topping hải sản tôm mực kết hợp dứa chua ngọt thanh mát và được phủ 2 tầng hỗn hợp phô mai Mozzarella và Cheddar nên một khẩu vị xuất sắc với sắc màu óng ánh vàng ươm",
+  "thumbnail": "/images/foods/pizza/pizza_hai_san_nhiet_doi.jpeg",
+  "price": 309000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73ac"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò & tôm nướng kiểu Mỹ size vừa",
+  "description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
+  "thumbnail": "/images/foods/pizza/pizza_bo_tom.jpg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73ad"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò & tôm nướng kiểu Mỹ size nhỏ",
+  "description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
+  "thumbnail": "/images/foods/pizza/pizza_bo_tom.jpg",
+  "price": 109000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73ae"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò & tôm nướng kiểu Mỹ size lớn",
+  "description": "Pizza Surf and Turf - size M. Pizza được kết hợp với những hương sắc khác nhau, vị ngọt của tôm tươi mọng nước kết hợp với vị ngọt từ bò Mexico mềm đến từng lát thịt.",
+  "thumbnail": "/images/foods/pizza/pizza_bo_tom.jpg",
+  "price": 309000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73af"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza xúc xích Ý truyền thống size vừa",
+  "description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
+  "thumbnail": "/images/foods/pizza/pizza_xuc_xich.jpeg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b0"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza xúc xích Ý truyền thống size nhỏ",
+  "description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
+  "thumbnail": "/images/foods/pizza/pizza_xuc_xich.jpeg",
+  "price": 109000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b1"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza xúc xích Ý truyền thống size lớn",
+  "description": "Pizza Pepperoni - size M. Công thức và nguyên liệu được làm theo đúng hương vị Ý cổ điển, với những lát xúc xích Pepperoni đỏ tươi kèm sốt cà chua, đối nghịch với những mảng phô mai Mozzarella vàng rượm dai dai béo ngậy.",
+  "thumbnail": "/images/foods/pizza/pizza_xuc_xich.jpeg",
+  "price": 309000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b2"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà sốt tương kiểu Nhật size vừa",
+  "description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
+  "thumbnail": "/images/foods/pizza/pizza_ga_sot_tuong.jpg",
+  "price": 189000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b3"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà sốt tương kiểu Nhật size nhỏ",
+  "description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
+  "thumbnail": "/images/foods/pizza/pizza_ga_sot_tuong.jpg",
+  "price": 109000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b4"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza gà sốt tương kiểu Nhật size lớn",
+  "description": "Pizza Teriyaki Chicken - size M. Từng miếng thịt gà trắng bùi xen kẽ với những miếng nấm mỡ và hành tây vừa thơm vừa ngọt, nằm gọn trên lớp phô mai Mozzarella beo béo đi kèm với sốt Mayonnaise và Teriyaki trứ danh từ nền ẩm thực Nhật Bản!",
+  "thumbnail": "/images/foods/pizza/pizza_ga_sot_tuong.jpg",
+  "price": 309000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b5"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò Mexico thượng hạng size vừa",
+  "description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
+  "thumbnail": "/images/foods/pizza/pizza_bo_mexico.jpeg",
+  "price": 249000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b6"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò Mexico thượng hạng size nhỏ",
+  "description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
+  "thumbnail": "/images/foods/pizza/pizza_bo_mexico.jpeg",
+  "price": 169000,
+  "is_delete": false
+},{
+  "_id": {
+    "$oid": "62263546c44f38a0f56e73b7"
+  },
+  "type": {
+    "$oid": "6221b408e746d247310976f6"
+  },
+  "name": "Pizza bò Mexico thượng hạng size lớn",
+  "description": "Pizza Prime Beef - size M. Thịt bò lại ăn kèm phô mai Mozzarella thơm béo, hòa quyện cùng 2 loại sốt Cà Chua và Phô Mai thì còn gì bằng. Thịt ngập trong đủ loại sốt và phô mai, chỉ muốn nuốt trọn cả chiếc bánh!!",
+  "thumbnail": "/images/foods/pizza/pizza_bo_mexico.jpeg",
+  "price": 369000,
+  "is_delete": false
+}]
