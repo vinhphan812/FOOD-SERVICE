@@ -1,4 +1,4 @@
-const { SCHEMA_OPTION } = require("../utils/constant");
+const { SCHEMA_OPTION } = require("../utils/constaints");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;

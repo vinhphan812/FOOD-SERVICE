@@ -1,4 +1,8 @@
-const { SCHEMA_OPTION, ignoreModel, makeQuery } = require("../utils/constant");
+const {
+	SCHEMA_OPTION,
+	ignoreModel,
+	makeQuery,
+} = require("../utils/constaints");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
@@ -6,7 +10,7 @@ const { Schema } = mongoose;
 const NotificationSchema = new Schema(
 	{
 		title: String,
-		content: String,
+		body: String,
 		href: String,
 		is_delete: { type: Boolean, default: false },
 		recipient: { type: Schema.Types.ObjectId, ref: "USER" },

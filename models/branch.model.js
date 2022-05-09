@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { SCHEMA_OPTION } = require("../utils/constant");
+const { SCHEMA_OPTION } = require("../utils/constaints");
 const { Schema } = mongoose;
 
 const BranchSchema = new Schema(

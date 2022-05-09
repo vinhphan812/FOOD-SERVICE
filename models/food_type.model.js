@@ -1,4 +1,8 @@
-const { SCHEMA_OPTION, makeQuery, ignoreModel } = require("../utils/constant");
+const {
+	SCHEMA_OPTION,
+	makeQuery,
+	ignoreModel,
+} = require("../utils/constaints");
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;

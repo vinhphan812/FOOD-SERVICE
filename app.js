@@ -11,6 +11,11 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { networkInterfaces } = require("os");
 
+const admin = require("firebase-admin");
+
+const { getMessaging } = require("firebase-admin/messaging");
+const serviceAccount = require("./food-services-1de98-firebase-adminsdk-b0y0g-92b348c858.json");
+
 // import route
 const apiRoute = require("./api/routers/index.route");
 const authRoute = require("./api/routers/auth.route");
@@ -23,6 +28,18 @@ if (process.env.db_url)
 	mongoose.connect(process.env.db_url, {
 		connectTimeoutMS: 500,
 	});
+
+admin.initializeApp({
+	credential: admin.credential.cert(serviceAccount),
+});
+
+// getMessaging()
+// 	.send({
+// 		notification: { title: "Price drop", body: "5% off all electronics" },
+// 		token: "e3TW3MfMSYSvTtQV9sqHml:APA91bHYcnNCYl0EvXhLtqxJ01dSlxmrgcjOGwd3oBvAL1t5e8ZRRkfdEroGGy8e9Ct03TSUWqp8pnWjhnvuRlym6OZD1OkaWke9NjyzX-I7NTXbM7IfJ9cYcT1-lyP7Vg8df31znbHJ",
+// 	})
+// 	.then(console.log);
+
 // init app
 const app = express();
 

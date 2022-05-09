@@ -11,6 +11,12 @@ const {
 } = require("../../models/require.model");
 const NotificationFactory = require("../../modules/notification");
 
+const {
+	TAKE_SUCCESS_VOUCHER,
+	MAKE_BODY_MESSAGE_TAKE_VOUCHER,
+	TAKE_VOUCHER_HREF,
+} = require("../../utils/constaints");
+
 module.exports = {
 	getMe: (req, res, next) => {
 		const { user } = res.locals;
@@ -139,20 +145,45 @@ module.exports = {
 		res.json(result);
 	},
 	takeVoucher: async (req, res) => {
-		const { id } = req.body;
+		const { id, token } = req.body;
 		const { user } = res.locals;
 
 		const voucher = await Voucher.findOne({ _id: id });
 
 		const isValid = voucher.checkValid();
 
-		const takeLevel = voucher.checkTakeLevel(user.current_ranking.code);
+		const takeLevel = voucher.checkVoucherLevel(
+			user.current_ranking.code
+		);
 
-		if (isValid && takeLevel)
+		const takedVoucher = await VirtualDisplayVoucher.findOne({
+			voucher_id: id,
+		});
+
+		if (takedVoucher) {
+			return res.json({ success: false, message: "VOUCHER_TAKED" });
+		}
+
+		if (isValid && takeLevel) {
 			await VirtualDisplayVoucher.create({
 				user_id: user.id,
 				voucher_id: id,
 			});
+
+			try {
+				await NotificationFactory.createNotify(
+					{
+						title: TAKE_SUCCESS_VOUCHER,
+						body: MAKE_BODY_MESSAGE_TAKE_VOUCHER(voucher),
+					},
+					token,
+					user.id,
+					TAKE_VOUCHER_HREF(id)
+				);
+			} catch (error) {
+				console.log(error.message);
+			}
+		}
 
 		res.json({
 			success: isValid && takeLevel,

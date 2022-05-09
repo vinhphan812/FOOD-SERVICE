@@ -2,7 +2,7 @@ const {
 	SCHEMA_OPTION,
 	checkInvalidID,
 	ignoreModel,
-} = require("../utils/constant");
+} = require("../utils/constaints");
 
 const mongoose = require("mongoose");
 

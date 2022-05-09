@@ -1,6 +1,11 @@
-const { SCHEMA_OPTION, ignoreModel, makeQuery } = require("../utils/constant");
+const {
+	SCHEMA_OPTION,
+	ignoreModel,
+	makeQuery,
+} = require("../utils/constaints");
 
 const mongoose = require("mongoose");
+const VirtualDisplayVoucher = require("./virtual_display_voucher.model");
 const { Schema } = mongoose;
 
 const levels = { NORMAL: 0, SILVER: 1, GOLD: 2, PLATINUM: 3, DIAMOND: 4 };

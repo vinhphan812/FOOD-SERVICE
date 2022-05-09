@@ -13,6 +13,8 @@ const {
 	addToCart,
 	getCart,
 	getFoodDetail,
+	getVouchersPublic,
+	createVoucherTest,
 } = require("../controllers/public.controller");
 const { verifyMail } = require("../../utils/template.mail");
 const Voucher = require("../../models/voucher.model");
@@ -26,64 +28,9 @@ router.get("/foods/:id", idValidation, getFoodDetail);
 
 router.get("/food-type", getFoodsType);
 
-router.get("/vouchers", async (req, res) => {
-	const vouchersData = [
-		{
-			name: "voucher shipper",
-			icon: "",
-			code: "FREESHIP",
-			description: "",
-			voucher_type: "SHIPPING",
-			discount_type: "PERCENT",
-			discount: 50,
-			max_price: 25000,
-			max_used: 10,
-			used: 5,
-			min_price: 0,
-			max_price: 0,
-			is_delete: false,
-		},
-		{
-			name: "voucher giảm giá 50% tối đa 5000đ",
-			icon: "",
-			code: "V50PT5K",
-			description: "",
-			voucher_type: "USING",
-			discount_type: "PERCENT",
-			discount: 50,
-			max_used: 10,
-			used: 5,
-			min_price: 0,
-			max_price: 5000,
-			is_delete: false,
-		},
-		{
-			name: "voucher giảm 10000đ",
-			icon: "",
-			code: "VC10k",
-			description: "",
-			voucher_type: "USING",
-			discount_type: "MONEY",
-			discount: 30,
-			max_used: 10,
-			used: 5,
-			min_price: 0,
-			max_price: 0,
-			is_delete: false,
-		},
-	];
+router.get("/vouchers", getVouchersPublic);
 
-	const voucher = await Voucher.create(vouchersData);
-
-	// for (const vou of voucher)
-	// 	await VirtualDisplayVoucher.create({
-	// 		user_id: "6245ea90bac86a45105c9487",
-	// 		voucher_id: vou.id,
-	// 	});
-
-	const data = await Voucher.getValid();
-	res.json({ success: true, data });
-});
+router.get("/create-voucher", createVoucherTest);
 
 router.get("/discount/:id", async function (req, res) {
 	const { id } = req.params;

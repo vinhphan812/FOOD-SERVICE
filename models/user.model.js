@@ -1,4 +1,4 @@
-const { SCHEMA_OPTION, ignoreModel } = require("../utils/constant");
+const { SCHEMA_OPTION, ignoreModel } = require("../utils/constaints");
 const Ranking = require("./ranking.model");
 
 const mongoose = require("mongoose");
