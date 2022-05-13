@@ -33,13 +33,6 @@ admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
 });
 
-// getMessaging()
-// 	.send({
-// 		notification: { title: "Price drop", body: "5% off all electronics" },
-// 		token: "e3TW3MfMSYSvTtQV9sqHml:APA91bHYcnNCYl0EvXhLtqxJ01dSlxmrgcjOGwd3oBvAL1t5e8ZRRkfdEroGGy8e9Ct03TSUWqp8pnWjhnvuRlym6OZD1OkaWke9NjyzX-I7NTXbM7IfJ9cYcT1-lyP7Vg8df31znbHJ",
-// 	})
-// 	.then(console.log);
-
 // init app
 const app = express();
 
