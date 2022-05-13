@@ -1,4 +1,4 @@
 /node_modules/
 /.vscode/
 .env
-food-services(.*).json
+food-services*.json
