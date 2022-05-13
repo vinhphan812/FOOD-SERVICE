@@ -1,5 +1,3 @@
-const Mailer = require("../../modules/mailer");
-
 const express = require("express");
 
 const idValidation = require("../validations/id.validate");
@@ -16,7 +14,6 @@ const {
 	getVouchersPublic,
 	createVoucherTest,
 } = require("../controllers/public.controller");
-const { verifyMail } = require("../../utils/template.mail");
 const Voucher = require("../../models/voucher.model");
 
 const router = express.Router();
@@ -41,16 +38,5 @@ router.get("/discount/:id", async function (req, res) {
 });
 
 router.get("/branches", getBranchs);
-
-router.get("/mail", async (req, res) => {
-	const mailer = await Mailer.init();
-
-	mailer.sendMail(
-		["lethanhquang147@gmail.com"],
-		"Hello",
-		verifyMail("Lê Thanh Quang", "Ét o Ét")
-	);
-	res.json({ mailer });
-});
 
 module.exports = router;

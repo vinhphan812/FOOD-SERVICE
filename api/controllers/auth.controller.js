@@ -1,7 +1,5 @@
 const md5 = require("md5");
 const User = require("../../models/user.model");
-const Mailer = require("../../modules/mailer");
-const createVerifyCode = require("../../utils/verify_code");
 const NotificationFactory = require("../../modules/notification");
 
 module.exports = {
@@ -43,19 +41,6 @@ module.exports = {
 		user.password = md5(user.password);
 
 		const userCreated = await User.create(user);
-
-		//! create verify code
-		// const code = createVerifyCode();
-		const expires = new Date();
-
-		// expires = currentTime + 2 minutes
-		expires.setMinutes(expires.getMinutes() + 2);
-
-		// ConfirmMail.create({ user_id: user.id, code, expires });
-		//! send mail
-
-		const mailer = await Mailer.init();
-		await mailer.sendMail([user.email]);
 
 		await NotificationFactory.createNotify(
 			{
