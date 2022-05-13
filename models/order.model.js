@@ -6,7 +6,7 @@ const {
 
 const mongoose = require("mongoose");
 
-const SessionStore = require("./store.model");
+const Store = require("./store.model");
 const OrderDetail = require("./order_detail.model");
 const Voucher = require("./voucher.model");
 const Food = require("./food.model");
@@ -37,7 +37,6 @@ const OrderSchema = new Schema(
 
 OrderSchema.static({
 	createOrder: async function (
-		sessionId,
 		user,
 		branch,
 		note,
@@ -46,7 +45,7 @@ OrderSchema.static({
 	) {
 		const DEFAULT_SHIPPING_FEE = 25000;
 
-		const data = await SessionStore.getCart(sessionId);
+		const data = await Store.getCart(user);
 
 		if (!data.length)
 			return { success: false, message: "FOOD_ORDER_IS_EMPTY" };

@@ -1,8 +1,8 @@
 const md5 = require("md5");
 const User = require("../../models/user.model");
-const ConfirmMail = require("../../models/confirm_mail.model");
 const Mailer = require("../../modules/mailer");
 const createVerifyCode = require("../../utils/verify_code");
+const NotificationFactory = require("../../modules/notification");
 
 module.exports = {
 	loginHandle: async (req, res, next) => {
@@ -27,6 +27,7 @@ module.exports = {
 				: "FAIL_AUTHENTICATION",
 		});
 	},
+
 	forgotHandle: (req, res, next) => {
 		const { email } = req.body;
 
@@ -34,12 +35,14 @@ module.exports = {
 
 		res.json({ success: true, message: "SEND_MAIL_SUCCESS" });
 	},
+
 	signUpHandle: async (req, res, next) => {
 		const { user } = res.locals;
+		const { token } = req.body;
 
 		user.password = md5(user.password);
 
-		await User.create(user);
+		const userCreated = await User.create(user);
 
 		//! create verify code
 		// const code = createVerifyCode();
@@ -54,8 +57,21 @@ module.exports = {
 		const mailer = await Mailer.init();
 		await mailer.sendMail([user.email]);
 
-		res.json({ success: true, message: "CREATE_ACCOUNT_SUCCESS" });
+		await NotificationFactory.createNotify(
+			{
+				title: `Chúc mừng bạn đã tạo thành công!`,
+				body: `${user.username} đã được tạo thành công! đăng nhập app để thỏa sức đặt đồ ăn!`,
+			},
+			token,
+			userCreated.id,
+			`user/${userCreated.id}`
+		);
+		res.json({
+			success: true,
+			message: "CREATE_ACCOUNT_SUCCESS",
+		});
 	},
+
 	logoutHandle: (req, res, next) => {
 		res.clearCookie("userId").json({
 			success: true,

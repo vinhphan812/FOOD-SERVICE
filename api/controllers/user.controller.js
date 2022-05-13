@@ -1,5 +1,3 @@
-const ComfirmMail = require("../../models/confirm_mail.model");
-
 const {
 	User,
 	VirtualDisplayVoucher,
@@ -103,11 +101,10 @@ module.exports = {
 		res.json({ success: true, message: "VERIFY_SUCCESS" });
 	},
 	createOrder: async (req, res) => {
-		const { user, sessionId } = res.locals;
-		const { branch, note, voucher_ship, voucher_using } = req.body;
+		const { user } = res.locals;
+		const { branch, note, voucher_ship, voucher_using, token } = req.body;
 
 		const { success, message, total, order_id } = await Order.createOrder(
-			sessionId,
 			user.id,
 			branch,
 			note,
@@ -118,7 +115,8 @@ module.exports = {
 		//TODO: create order success up score => up ranking
 		if (success) {
 			user.upScore(total);
-			NotificationFactory.forOrder(order_id);
+
+			NotificationFactory.forOrder(user.id, order_id, total, token);
 		}
 
 		res.json({ success, message });
@@ -145,32 +143,35 @@ module.exports = {
 		res.json(result);
 	},
 	takeVoucher: async (req, res) => {
-		const { id, token } = req.body;
-		const { user } = res.locals;
+		try {
+			const { id, token } = req.body;
+			const { user } = res.locals;
 
-		const voucher = await Voucher.findOne({ _id: id });
+			const voucher = await Voucher.findOne({ _id: id });
 
-		const isValid = voucher.checkValid();
+			const isValid = voucher.checkValid();
 
-		const takeLevel = voucher.checkVoucherLevel(
-			user.current_ranking.code
-		);
+			const takeLevel = voucher.checkVoucherLevel(
+				user.current_ranking.code
+			);
 
-		const takedVoucher = await VirtualDisplayVoucher.findOne({
-			voucher_id: id,
-		});
-
-		if (takedVoucher) {
-			return res.json({ success: false, message: "VOUCHER_TAKED" });
-		}
-
-		if (isValid && takeLevel) {
-			await VirtualDisplayVoucher.create({
-				user_id: user.id,
+			const takedVoucher = await VirtualDisplayVoucher.findOne({
 				voucher_id: id,
 			});
 
-			try {
+			if (takedVoucher) {
+				return res.json({
+					success: false,
+					message: "VOUCHER_TAKED",
+				});
+			}
+
+			if (isValid && takeLevel) {
+				await VirtualDisplayVoucher.create({
+					user_id: user.id,
+					voucher_id: id,
+				});
+
 				await NotificationFactory.createNotify(
 					{
 						title: TAKE_SUCCESS_VOUCHER,
@@ -180,20 +181,20 @@ module.exports = {
 					user.id,
 					TAKE_VOUCHER_HREF(id)
 				);
-			} catch (error) {
-				console.log(error.message);
 			}
-		}
 
-		res.json({
-			success: isValid && takeLevel,
-			message:
-				isValid && takeLevel
-					? "TAKE_VOUCHER_SUCCESS"
-					: takeLevel
-					? "TAKE_LEVEL_NOT_ENOUGH"
-					: "VOUCHER_INVALID",
-		});
+			res.json({
+				success: isValid && takeLevel,
+				message:
+					isValid && takeLevel
+						? "TAKE_VOUCHER_SUCCESS"
+						: takeLevel
+						? "TAKE_LEVEL_NOT_ENOUGH"
+						: "VOUCHER_INVALID",
+			});
+		} catch (error) {
+			console.log(error.message);
+		}
 	},
 	addToCart: async (req, res) => {
 		const { food, type } = req.body;

@@ -18,30 +18,25 @@ module.exports = class NotificationFactory {
 					recipient,
 					href,
 				});
-
-				getMessaging()
-					.send({ notification, token })
-					.then((res) => {
-						resolve({
-							success: true,
-							message: "CREATE_NOTIFICATION_SUCCESS",
-						});
-					})
-					.catch((err) => {
-						reject({ success: false, message: err.message });
+				if (token) {
+					await getMessaging().send({ notification, token });
+					resolve({
+						success: true,
+						message: "CREATE_NOTIFICATION_SUCCESS",
 					});
+				}
 			} catch ({ message }) {
 				reject({ success: false, message });
 			}
 		});
 	}
-	static forOrder(_id) {
+	static forOrder(userId, _id, total, token) {
 		return new Promise(async (resolve, reject) => {
-			const order = await Order.findOne({ _id });
+			const href = "order/" + _id;
 
-			const title = "";
-
-			Notification.create({});
+			const title = `Đơn hàng #${_id} đặt thành công`,
+				body = `Đơn hàng #${_id} đã được đặt với giá tiền ${total}đ. Vui lòng nhận hàng khi shipper gọi`;
+			createNotify({ title, body }, token, userId, href);
 		});
 	}
 };

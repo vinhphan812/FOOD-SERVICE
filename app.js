@@ -20,7 +20,7 @@ const serviceAccount = require("./food-services-1de98-firebase-adminsdk-b0y0g-92
 const apiRoute = require("./api/routers/index.route");
 const authRoute = require("./api/routers/auth.route");
 
-const { db_url, db_user, db_pass, db_name } = process.env;
+const { db_url, db_user, db_pass, db_name, SECRET_KEY } = process.env;
 
 // get PORT
 const PORT = process.env.port || 3000;
@@ -42,7 +42,7 @@ admin.initializeApp({
 const app = express();
 
 // use cookies
-app.use(cookieParser(process.env.SECRET_KEY));
+app.use(cookieParser(SECRET_KEY));
 
 // use middleware
 app.use(cors());
