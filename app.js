@@ -20,12 +20,17 @@ const serviceAccount = require("./food-services-1de98-firebase-adminsdk-b0y0g-92
 const apiRoute = require("./api/routers/index.route");
 const authRoute = require("./api/routers/auth.route");
 
+const { db_url, db_user, db_pass, db_name } = process.env;
+
 // get PORT
 const PORT = process.env.port || 3000;
 
 // connect database from .env
-if (process.env.db_url)
-	mongoose.connect(process.env.db_url, {
+if (db_url)
+	mongoose.connect(db_url, {
+		user: db_user,
+		pass: db_pass,
+		dbName: db_name,
 		connectTimeoutMS: 500,
 	});
 
