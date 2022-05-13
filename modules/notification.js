@@ -20,11 +20,11 @@ module.exports = class NotificationFactory {
 				});
 				if (token) {
 					await getMessaging().send({ notification, token });
-					resolve({
-						success: true,
-						message: "CREATE_NOTIFICATION_SUCCESS",
-					});
 				}
+				resolve({
+					success: true,
+					message: "CREATE_NOTIFICATION_SUCCESS",
+				});
 			} catch ({ message }) {
 				reject({ success: false, message });
 			}
