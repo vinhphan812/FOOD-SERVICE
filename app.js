@@ -9,7 +9,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const { networkInterfaces } = require("os");
 
 const admin = require("firebase-admin");
 
@@ -63,7 +62,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-	const nets = networkInterfaces();
-
-	console.log(`server run in http:\/\/${nets["Wi-Fi"][1].address}:${PORT}`);
+	console.log(`server run in port ${PORT}`);
 });
