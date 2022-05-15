@@ -1,6 +1,7 @@
 const { SCHEMA_OPTION, ignoreModel } = require("../utils/constaints");
 
 const mongoose = require("mongoose");
+const Food = require("./food.model");
 const { Schema } = mongoose;
 
 const EtypeChange = { INCREASEMENT: 1, DECREASEMENT: -1 };
@@ -44,10 +45,22 @@ StoreSchema.static({
 		);
 
 		if (!store) store = await this.createCart(_id);
-		return Object.keys(store.data).map((e) => ({
-			food_id: e,
-			quantity: store.data[e],
-		}));
+
+		const foodIds = Object.keys(store.data);
+
+		const foods = [];
+
+		for (const _id of foodIds) {
+			const food = await Food.findOne(
+				{ _id },
+				ignoreModel(["description", "type"])
+			);
+			food._doc.quantity = store.data[_id];
+
+			foods.push(food);
+		}
+
+		return foods;
 	},
 });
 
