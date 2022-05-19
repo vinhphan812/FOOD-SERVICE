@@ -1,79 +1,110 @@
-[{
-  "_id": {
-    "$oid": "624ab78eac817af013ab446c"
-  },
-  "address": "234 Lê Văn Sỹ, Phường 1, Tân Bình, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Lê Văn Sỹ",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-},{
-  "_id": {
-    "$oid": "624ab78eac817af013ab446b"
-  },
-  "address": "295/1 Lý Thường Kiệt, P.15, Quận 11, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Lý Thường Kiệt",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-},{
-  "_id": {
-    "$oid": "624ab78eac817af013ab4469"
-  },
-  "address": "824/13 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Sư Vạn Hạnh",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-},{
-  "_id": {
-    "$oid": "624ab78eac817af013ab446d"
-  },
-  "address": "11A Tự Lập, Phường 4, Tân Bình, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Tự Lập",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-},{
-  "_id": {
-    "$oid": "624ab78eac817af013ab446a"
-  },
-  "address": "122 Tô Hiến Thành, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Tô Hiến Thành",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-},{
-  "_id": {
-    "$oid": "624ab78eac817af013ab446e"
-  },
-  "address": "230 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh",
-  "name": "Foozie Chi Nhánh Âu Dương Lân",
-  "phone": "0334561242",
-  "created_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  },
-  "updated_at": {
-    "$date": "2022-04-04T09:17:02.262Z"
-  }
-}]
+[
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab446c"
+		},
+		"address": "234 Lê Văn Sỹ, Phường 1, Tân Bình, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Lê Văn Sỹ",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.79434,
+			"longitude": 106.66597
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab446b"
+		},
+		"address": "295/1 Lý Thường Kiệt, P.15, Quận 11, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Lý Thường Kiệt",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.77558,
+			"longitude": 106.65499
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab4469"
+		},
+		"address": "824/13 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Sư Vạn Hạnh",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.77562,
+			"longitude": 106.66795
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab446d"
+		},
+		"address": "11A Tự Lập, Phường 4, Tân Bình, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Tự Lập",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.84856,
+			"longitude": 106.77818
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab446a"
+		},
+		"address": "122 Tô Hiến Thành, Phường 14, Quận 10, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Tô Hiến Thành",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.77955,
+			"longitude": 106.66894
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "624ab78eac817af013ab446e"
+		},
+		"address": "230 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh",
+		"name": "Foozie Chi Nhánh Âu Dương Lân",
+		"phone": "0334561242",
+		"latLng": {
+			"latitude": 10.74277,
+			"longitude": 106.68357
+		},
+		"created_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		},
+		"updated_at": {
+			"$date": "2022-04-04T09:17:02.262Z"
+		}
+	}
+]
