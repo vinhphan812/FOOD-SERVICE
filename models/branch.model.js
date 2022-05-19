@@ -6,6 +6,10 @@ const BranchSchema = new Schema(
 	{
 		address: String,
 		name: String,
+		latLng: {
+			latitude: Number,
+			longitude: Number,
+		},
 		phone: { type: String, default: "0334561242" },
 	},
 	SCHEMA_OPTION
