@@ -39,7 +39,10 @@ const makeQuery = (query = {}, is_delete = false) => {
 
 const checkInvalidID = (id) => id.length != 24;
 
+const morganConfig = `:date[clf]] ":method :url HTTP/:http-version" :status :response-time ms`;
+
 module.exports = {
+	morganConfig,
 	SCHEMA_OPTION,
 	TAKE_SUCCESS_VOUCHER,
 	ignoreModel,
