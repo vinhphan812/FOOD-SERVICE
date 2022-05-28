@@ -102,14 +102,14 @@ module.exports = {
 	},
 	createOrder: async (req, res) => {
 		const { user } = res.locals;
-		const { branch, note, voucher_ship, voucher_using, token } = req.body;
+		const { branch, note, shipping_fee, voucher_using, token } = req.body;
 
 		const { success, message, total, order_id } = await Order.createOrder(
 			user.id,
 			branch,
 			note,
-			voucher_ship,
-			voucher_using
+			voucher_using,
+			shipping_fee
 		);
 
 		//TODO: create order success up score => up ranking
@@ -138,8 +138,16 @@ module.exports = {
 	},
 	checkVoucher: async (req, res) => {
 		const { id } = req.params;
+		const { price, shipping_fee } = req.body;
 
-		const result = await Voucher.checkValidAndDiscount(id);
+		if (!price || !shipping_fee)
+			return res.json({ success: false, message: "BAD REQUEST" });
+
+		const result = await Voucher.checkValidAndDiscount(
+			id,
+			price,
+			shipping_fee
+		);
 		res.json(result);
 	},
 	takeVoucher: async (req, res) => {

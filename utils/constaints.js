@@ -41,7 +41,10 @@ const checkInvalidID = (id) => id.length != 24;
 
 const morganConfig = `:date[clf]] ":method :url HTTP/:http-version" :status :response-time ms`;
 
+const DEFAULT_SHIPPING_FEE = 25000;
+
 module.exports = {
+	DEFAULT_SHIPPING_FEE,
 	morganConfig,
 	SCHEMA_OPTION,
 	TAKE_SUCCESS_VOUCHER,

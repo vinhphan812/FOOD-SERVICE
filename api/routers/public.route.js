@@ -8,11 +8,10 @@ const {
 	getFoods,
 	getFoodsType,
 	getBranchs,
-	addToCart,
-	getCart,
 	getFoodDetail,
 	getVouchersPublic,
 	createVoucherTest,
+	calculatorShippingFee,
 } = require("../controllers/public.controller");
 const Voucher = require("../../models/voucher.model");
 
@@ -36,6 +35,8 @@ router.get("/discount/:id", async function (req, res) {
 
 	res.json({ count: voucher.discountVoucher(25000) });
 });
+
+router.post("/shipping-distance", calculatorShippingFee);
 
 router.get("/branches", getBranchs);
 

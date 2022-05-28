@@ -1,4 +1,4 @@
-const { ignoreModel } = require("../../utils/constaints");
+const { ignoreModel, DEFAULT_SHIPPING_FEE } = require("../../utils/constaints");
 
 const {
 	Branch,
@@ -73,7 +73,7 @@ module.exports = {
 	createVoucherTest: async (req, res) => {
 		const vouchersData = [
 			{
-				name: "voucher shipper",
+				name: "voucher phí shipper 50% tối đa 25k",
 				icon: "",
 				code: "FREESHIP",
 				description: "",
@@ -108,7 +108,7 @@ module.exports = {
 				description: "",
 				voucher_type: "USING",
 				discount_type: "MONEY",
-				discount: 30,
+				discount: 10000,
 				max_used: 10,
 				used: 5,
 				min_price: 0,
@@ -120,5 +120,19 @@ module.exports = {
 		await Voucher.create(vouchersData);
 
 		res.json({ success: true, message: "haha" });
+	},
+	calculatorShippingFee: (req, res) => {
+		const { distance } = req.body;
+
+		const fee = parseInt(distance) * 5000;
+		res.json({
+			success: true,
+			data: {
+				fee:
+					fee > DEFAULT_SHIPPING_FEE
+						? fee
+						: DEFAULT_SHIPPING_FEE,
+			},
+		});
 	},
 };

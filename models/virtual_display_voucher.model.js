@@ -18,13 +18,10 @@ VirtualDisplayVoucherSchema.static({
 			user_id: id,
 		}).populate("voucher_id");
 
-		return vouchers.reduce(
-			(r, { voucher_id: v }) => {
-				if (v.checkValid()) r[v.voucher_type].push(v);
-				return r;
-			},
-			{ SHIPPING: [], USING: [] }
-		);
+		return vouchers.reduce((r, { voucher_id: v }) => {
+			if (v.checkValid()) r.push(v);
+			return r;
+		}, []);
 	},
 });
 

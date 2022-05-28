@@ -2,6 +2,7 @@ const {
 	SCHEMA_OPTION,
 	checkInvalidID,
 	ignoreModel,
+	DEFAULT_SHIPPING_FEE,
 } = require("../utils/constaints");
 
 const mongoose = require("mongoose");
@@ -17,7 +18,6 @@ const OrderSchema = new Schema(
 	{
 		total_foods: Number,
 		order_date: { type: Date, default: new Date() },
-		voucher_ship: { type: Schema.Types.ObjectId, ref: "VOUCHER" },
 		voucher_using: { type: Schema.Types.ObjectId, ref: "VOUCHER" },
 		is_delete: { type: Boolean, default: false },
 		delivery: String,
@@ -40,51 +40,26 @@ OrderSchema.static({
 		user,
 		branch,
 		note,
-		voucher_ship,
-		voucher_using
+		voucher_using,
+		shipping_fee
 	) {
-		const DEFAULT_SHIPPING_FEE = 25000;
-
 		const data = await Store.getCart(user);
 
 		if (!data.length)
 			return { success: false, message: "FOOD_ORDER_IS_EMPTY" };
 
 		// check id
-		if (
-			(voucher_ship && checkInvalidID(voucher_ship)) ||
-			(voucher_using && checkInvalidID(voucher_using))
-		)
+		if (voucher_using && checkInvalidID(voucher_using))
 			return { success: false, message: "VOUCHER_ID_INVALID" };
 
-		voucher_ship = await Voucher.findOne({ _id: voucher_ship });
 		voucher_using = await Voucher.findOne({ _id: voucher_using });
-
-		// check voucher valid & type
-		const voucherShipCheck =
-			voucher_ship && voucher_ship.checkVoucherType("SHIPPING");
-
-		const voucherUsingCheck =
-			voucher_using && voucher_using.checkVoucherType("USING");
-
-		if (voucher_ship && voucherShipCheck != "VOUCHER_CHECK_PASSED")
-			return {
-				success: false,
-				message: "VOUCHER_SHIP_" + voucherShipCheck,
-			};
-
-		if (voucher_using && voucherUsingCheck != "VOUCHER_CHECK_PASSED")
-			return {
-				success: false,
-				message: "VOUCHER_USING_" + voucherUsingCheck,
-			};
 
 		//create order
 		const myOrder = await this.create({
 			branch,
 			note,
 			user,
-			shipping_fee: DEFAULT_SHIPPING_FEE,
+			shipping_fee: shipping_fee || DEFAULT_SHIPPING_FEE,
 		});
 
 		// make order detail
@@ -102,21 +77,17 @@ OrderSchema.static({
 			total_foods += food.price * quantity;
 		}
 
-		const discountShip = voucher_ship
-			? voucher_ship.discountVoucher(DEFAULT_SHIPPING_FEE)
-			: 0;
-
 		const discountUsing = voucher_using
-			? voucher_using.discountVoucher(total_foods)
+			? voucher_using.discountVoucher(
+					voucher_using.voucher_type == "USING"
+						? total_foods
+						: DEFAULT_SHIPPING_FEE
+			  )
 			: 0;
-
-		if (typeof discountShip == "string") {
-			await Order.deleteOne({ _id: myOrder.id });
-			return { success: false, message: discountShip };
-		}
 
 		if (typeof discountUsing == "string") {
 			await Order.deleteOne({ _id: myOrder.id });
+			await OrderDetail.deleteMany({ order_id: myOrder.id });
 			return { success: false, message: discountUsing };
 		}
 

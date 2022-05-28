@@ -45,19 +45,26 @@ VoucherSchema.static({
 			return r;
 		}, []);
 	},
-	checkValidAndDiscount: async function (_id, price) {
-		const voucher = await this.find(makeQuery({ _id }));
+	checkValidAndDiscount: async function (_id, price, shipping_fee) {
+		const voucher = await this.findOne(makeQuery({ _id }));
 
 		if (!voucher.checkValid())
 			return { success: false, message: "VOUCHER_INVALID" };
 
-		const discount = voucher.discountVoucher(price);
+		const discount = voucher.discountVoucher(
+			voucher.voucher_type == "USING" ? price : shipping_fee
+		);
 
 		return {
-			success: typeof discount === "string",
+			success: typeof discount !== "string",
 			...(typeof discount == "string"
 				? { message: discount }
-				: { data: { discount } }),
+				: {
+						data:
+							voucher.voucher_type == "USING"
+								? { price: discount, shipping_fee }
+								: { price, shipping_fee: discount },
+				  }),
 		};
 	},
 });
@@ -82,7 +89,7 @@ VoucherSchema.method({
 		if (this.min_price > price) return "PRICE_NOT_ENOUGH_USING_VOUCHER";
 
 		if (this.discount_type == "MONEY") {
-			discountPrice = this.discount;
+			discountPrice = price - this.discount;
 		} else {
 			// type == Percent
 			let discount = price * (this.discount / 100);
