@@ -117,9 +117,9 @@ module.exports = {
 			},
 		];
 
-		await Voucher.create(vouchersData);
+		const voucher = await Voucher.create(vouchersData);
 
-		res.json({ success: true, message: "haha" });
+		res.json({ success: true, message: "haha", data: voucher });
 	},
 	calculatorShippingFee: (req, res) => {
 		const { distance } = req.body;
