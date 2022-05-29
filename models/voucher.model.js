@@ -48,6 +48,8 @@ VoucherSchema.static({
 	checkValidAndDiscount: async function (_id, price, shipping_fee) {
 		const voucher = await this.findOne(makeQuery({ _id }));
 
+		if (!voucher) return { success: false, message: "VOUCHER_NOT_FOUND" };
+
 		if (!voucher.checkValid())
 			return { success: false, message: "VOUCHER_INVALID" };
 
