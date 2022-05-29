@@ -16,8 +16,15 @@ const {
 } = require("../../utils/constaints");
 
 module.exports = {
-	getMe: (req, res, next) => {
+	getMe: async (req, res, next) => {
 		const { user } = res.locals;
+
+		const myVoucher = await VirtualDisplayVoucher.myVouchers(user.id);
+
+		const myOrderHistory = await Order.getOrders(user.id, false);
+
+		user._doc.myHistoryOrderCount = myOrderHistory.length;
+		user._doc.myVoucherCount = myVoucher.length;
 
 		res.json({ success: true, data: user });
 	},
