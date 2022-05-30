@@ -19,8 +19,6 @@ const userSchema = new Schema(
 			ref: "RANKING",
 		},
 		score: { type: Number, default: 0 },
-		verify_code: { type: String, length: 4 },
-		isVerifyMail: { type: Boolean, default: false },
 	},
 	SCHEMA_OPTION
 );

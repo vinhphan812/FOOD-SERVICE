@@ -15,6 +15,9 @@ const {
 	TAKE_VOUCHER_HREF,
 } = require("../../utils/constaints");
 
+const md5 = require("md5");
+s;
+
 module.exports = {
 	getMe: async (req, res, next) => {
 		const { user } = res.locals;
@@ -29,11 +32,38 @@ module.exports = {
 		res.json({ success: true, data: user });
 	},
 	updateMe: async (req, res, next) => {
-		const { user } = res.locals;
+		try {
+			const { id } = res.locals.user;
+			const { password, ...user } = res.body;
 
-		const updateUser = await User.updateUser(user.id, req.body);
+			const updateUser = await User.updateUser(id, user);
 
-		res.json({ success: true, data: updateUser });
+			res.json({ success: true, data: updateUser });
+		} catch (e) {
+			res.json({ success: false, message: e.message });
+		}
+	},
+	changePassword: async (req, res, next) => {
+		const { current_password, new_password } = req.body;
+		const { user } = res.body;
+
+		const currentUser = User.findOne({ _id: user.id });
+
+		if (currentUser.password != md5(current_password)) {
+			res.json({
+				success: false,
+				message: "CURRENT_PASSWORD_INCORRECT",
+			});
+		}
+
+		await User.updateUser(currentUser.id, {
+			password: md5(new_password),
+		});
+
+		res.json({
+			success: true,
+			message: "CHANGE_PASSWORD_SUCCESS",
+		});
 	},
 	getMyVouchers: async (req, res, next) => {
 		const { user } = res.locals;
@@ -172,6 +202,7 @@ module.exports = {
 
 			const takedVoucher = await VirtualDisplayVoucher.findOne({
 				voucher_id: id,
+				user_id: user.id,
 			});
 
 			if (takedVoucher) {
