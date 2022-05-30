@@ -16,7 +16,6 @@ const {
 } = require("../../utils/constaints");
 
 const md5 = require("md5");
-s;
 
 module.exports = {
 	getMe: async (req, res, next) => {
