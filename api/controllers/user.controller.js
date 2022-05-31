@@ -46,10 +46,10 @@ module.exports = {
 		const { current_password, new_password } = req.body;
 		const { user } = res.locals;
 
-		const currentUser = User.findOne({ _id: user.id });
+		const currentUser = await User.findOne({ _id: user.id });
 
 		if (currentUser.password != md5(current_password)) {
-			res.json({
+			return res.json({
 				success: false,
 				message: "CURRENT_PASSWORD_INCORRECT",
 			});
