@@ -24,7 +24,7 @@ const VoucherSchema = new Schema(
 		discount: Number,
 		max_used: Number,
 		used: Number,
-		valid_date: { type: Date, default: new Date().setHours(24) },
+		valid_date: { type: Date, default: new Date().getTime() + 100000000 },
 		min_price: { type: Number, default: 0 },
 		max_price: { type: Number, default: 0 },
 		min_user_level: {

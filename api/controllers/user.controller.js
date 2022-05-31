@@ -33,7 +33,7 @@ module.exports = {
 	updateMe: async (req, res, next) => {
 		try {
 			const { id } = res.locals.user;
-			const { password, ...user } = res.body;
+			const { password, ...user } = req.body;
 
 			const updateUser = await User.updateUser(id, user);
 
