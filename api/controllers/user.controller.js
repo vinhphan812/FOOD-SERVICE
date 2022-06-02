@@ -13,6 +13,7 @@ const {
 	TAKE_SUCCESS_VOUCHER,
 	MAKE_BODY_MESSAGE_TAKE_VOUCHER,
 	TAKE_VOUCHER_HREF,
+	DEFAULT_SHIPPING_FEE,
 } = require("../../utils/constaints");
 
 const md5 = require("md5");
@@ -138,7 +139,10 @@ module.exports = {
 	},
 	createOrder: async (req, res) => {
 		const { user } = res.locals;
-		const { branch, note, shipping_fee, voucher_using, token } = req.body;
+		const { branch, note, distance, voucher_using, token } = req.body;
+		const fee = parseInt(distance) * 5000;
+		const shipping_fee =
+			fee > DEFAULT_SHIPPING_FEE ? fee : DEFAULT_SHIPPING_FEE;
 
 		const { success, message, total, order_id } = await Order.createOrder(
 			user.id,

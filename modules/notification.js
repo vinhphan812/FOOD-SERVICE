@@ -36,7 +36,12 @@ module.exports = class NotificationFactory {
 
 			const title = `Đơn hàng #${_id} đặt thành công`,
 				body = `Đơn hàng #${_id} đã được đặt với giá tiền ${total}đ. Vui lòng nhận hàng khi shipper gọi`;
-			createNotify({ title, body }, token, userId, href);
+			NotificationFactory.createNotify(
+				{ title, body },
+				token,
+				userId,
+				href
+			);
 		});
 	}
 };

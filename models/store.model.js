@@ -62,6 +62,9 @@ StoreSchema.static({
 
 		return foods;
 	},
+	clearCart: async function (_id) {
+		return this.deleteOne({ _id });
+	},
 });
 
 const Store = mongoose.model("STORE", StoreSchema, "STORE");

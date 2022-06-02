@@ -70,28 +70,31 @@ OrderSchema.static({
 			}))
 		);
 
-		let total_foods = 0;
+		let total_foods = 0,
+			total = 0;
 
-		for (const { food_id: _id, quantity } of data) {
-			const food = await Food.findOne({ _id });
-			total_foods += food.price * quantity;
+		for (const { _doc } of data) {
+			const { price, quantity } = _doc;
+			total_foods += price * quantity;
 		}
 
-		const discountUsing = voucher_using
-			? voucher_using.discountVoucher(
-					voucher_using.voucher_type == "USING"
-						? total_foods
-						: DEFAULT_SHIPPING_FEE
-			  )
-			: 0;
+		if (voucher_using) {
+			const discount = await Voucher.checkValidAndDiscount(
+				voucher_using.id,
+				total_foods,
+				shipping_fee
+			);
 
-		if (typeof discountUsing == "string") {
-			await Order.deleteOne({ _id: myOrder.id });
-			await OrderDetail.deleteMany({ order_id: myOrder.id });
-			return { success: false, message: discountUsing };
+			if (!discount.success) {
+				await Order.deleteOne({ _id: myOrder.id });
+				await OrderDetail.deleteMany({ order_id: myOrder.id });
+				return { success: false, message: discount.message };
+			}
+
+			total = discount.data.price + discount.data.shipping_fee;
 		}
 
-		const total = total_foods - discountUsing - discountShip;
+		total = shipping_fee + total_foods;
 
 		await Order.updateOne(
 			{ _id: myOrder.id },
@@ -99,6 +102,8 @@ OrderSchema.static({
 		);
 
 		//TODO: create NOTIFICATION
+
+		Store.clearCart(user);
 
 		return {
 			success: true,
