@@ -92,9 +92,7 @@ OrderSchema.static({
 			}
 
 			total = discount.data.price + discount.data.shipping_fee;
-		}
-
-		total = shipping_fee + total_foods;
+		} else total = shipping_fee + total_foods;
 
 		await Order.updateOne(
 			{ _id: myOrder.id },
