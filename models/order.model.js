@@ -41,7 +41,8 @@ OrderSchema.static({
 		branch,
 		note,
 		voucher_using,
-		shipping_fee
+		shipping_fee,
+		delivery
 	) {
 		const data = await Store.getCart(user);
 
@@ -60,6 +61,7 @@ OrderSchema.static({
 			note,
 			user,
 			shipping_fee: shipping_fee || DEFAULT_SHIPPING_FEE,
+			delivery,
 		});
 
 		// make order detail

@@ -139,7 +139,8 @@ module.exports = {
 	},
 	createOrder: async (req, res) => {
 		const { user } = res.locals;
-		const { branch, note, distance, voucher_using, token } = req.body;
+		const { branch, note, distance, voucher_using, token, delivery } =
+			req.body;
 		const fee = parseInt(distance) * 5000;
 		const shipping_fee =
 			fee > DEFAULT_SHIPPING_FEE ? fee : DEFAULT_SHIPPING_FEE;
@@ -149,7 +150,8 @@ module.exports = {
 			branch,
 			note,
 			voucher_using,
-			shipping_fee
+			shipping_fee,
+			delivery
 		);
 
 		//TODO: create order success up score => up ranking
