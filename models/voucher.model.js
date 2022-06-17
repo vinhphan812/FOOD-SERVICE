@@ -64,8 +64,15 @@ VoucherSchema.static({
 				: {
 						data:
 							voucher.voucher_type == "USING"
-								? { price: discount, shipping_fee }
-								: { price, shipping_fee: discount },
+								? {
+										price: price - discount,
+										shipping_fee,
+								  }
+								: {
+										price,
+										shipping_fee:
+											shipping_fee - discount,
+								  },
 				  }),
 		};
 	},
