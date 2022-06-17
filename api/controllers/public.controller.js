@@ -95,10 +95,10 @@ module.exports = {
 				voucher_type: "USING",
 				discount_type: "PERCENT",
 				discount: 50,
-				max_price: 2500000,
+				max_price: 250000,
 				max_used: 10,
 				used: 5,
-				min_price: 5000000,
+				min_price: 500000,
 				is_delete: false,
 			},
 			{
