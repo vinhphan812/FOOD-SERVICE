@@ -98,7 +98,7 @@ VoucherSchema.method({
 		if (this.min_price > price) return "PRICE_NOT_ENOUGH_USING_VOUCHER";
 
 		if (this.discount_type == "MONEY") {
-			discountPrice = price - this.discount;
+			discountPrice = this.discount;
 		} else {
 			// type == Percent
 			let discount = price * (this.discount / 100);
