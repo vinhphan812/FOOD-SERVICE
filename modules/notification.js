@@ -34,8 +34,10 @@ module.exports = class NotificationFactory {
 		return new Promise(async (resolve, reject) => {
 			const href = "order/" + _id;
 
-			const title = `Đơn hàng #${_id} đặt thành công`,
-				body = `Đơn hàng #${_id} đã được đặt với giá tiền ${total}đ. Vui lòng nhận hàng khi shipper gọi`;
+			const subId = _id.substr(0, 10);
+
+			const title = `Đơn hàng #${subId} đặt thành công`,
+				body = `Đơn hàng #${subId} đã được đặt với giá tiền ${total}đ. Vui lòng nhận hàng khi shipper gọi`;
 			NotificationFactory.createNotify(
 				{ title, body },
 				token,
