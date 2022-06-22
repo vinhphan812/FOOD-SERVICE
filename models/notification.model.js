@@ -26,7 +26,7 @@ NotificationSchema.static({
 			makeQuery({ recipient }, is_delete),
 			ignoreModel(["recipient"])
 		);
-		return query.limit(limit == "all" ? undefined : limit ? limit : 10);
+		return query.sort({date: -1});
 	},
 	seen: async function (_id, is_seen = true) {
 		await this.updateMany(_id ? { _id } : {}, { $set: { is_seen } });
