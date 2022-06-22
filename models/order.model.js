@@ -68,7 +68,8 @@ OrderSchema.static({
 		await OrderDetail.create(
 			data.map((e) => ({
 				order_id: myOrder.id,
-				...e,
+				food_id: e._doc._id,
+				quantity: e._doc.quantity
 			}))
 		);
 
@@ -119,10 +120,14 @@ OrderSchema.static({
 	},
 	getOrderDetail: async function (_id) {
 		const order = await this.findOne({ _id });
-		order._doc.details = await OrderDetail.find(
+		const data = await OrderDetail.find(
 			{ order_id: order.id },
 			ignoreModel(["created_at", "updated_at", "order_id", "_id"])
 		).populate("food_id");
+		
+		order._doc.details = data.map((e) =>{	
+			return {...e.food_id._doc, quantity: e.quantity};
+		})
 		return order;
 	},
 });
