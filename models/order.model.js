@@ -123,7 +123,7 @@ OrderSchema.static({
 		const data = await OrderDetail.find(
 			{ order_id: order.id },
 			ignoreModel(["created_at", "updated_at", "order_id", "_id"])
-		).populate("food_id");
+		).populate({path: "food_id", populate: "type"});
 		
 		order._doc.details = data.map((e) =>{	
 			return {...e.food_id._doc, quantity: e.quantity};
